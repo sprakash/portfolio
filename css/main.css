@@ -1,0 +1,267 @@
+*,
+html,
+body {
+	font-family: 'Verdana';
+	margin:0;
+	padding:0;
+	font-size: 16px;
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	font-size: 2.5em;
+    line-height: 1em;
+    letter-spacing: 0.02em;
+    font-weight: lighter;
+    transition: opacity 250ms ease-out;
+    letter-spacing: .25em;
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    justify-content: space-between;
+    text-align: center;
+    padding: .5em 0 .85em 0;
+    stext-transform: lowercase;
+    color: #98c3adfa;
+}
+
+h2 {
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: .15em;
+    color: #b9e6e65e;
+    margin-left: 23%;
+}
+
+hr {
+	margin: 1.5em 0 2em 0;
+}
+
+.top {
+	text-align: center;
+    margin: 0 0 5em;
+    font-style: italic;
+    font-size: .5em;
+}
+
+.top a,
+.top quote {
+	font-size: 1.5em;
+    letter-spacing: .05em;
+    color: #e2b19f;
+}
+
+.next-batch-img,
+.project-container {
+	display: flex;
+	margin: 0 auto;
+	max-width: 740px;
+	cursor: pointer;
+}
+
+.project-container div {
+	margin: 15px 25px;
+	flex-grow: 1;
+	flex-shrink: 1;
+  	flex-basis: 0;
+}
+
+.project-container div img {
+	display:inline-block;
+	width:100%;
+}
+
+
+.next-batch-img {
+	margin:0 !important;
+}
+.next-batch-img img {
+	width: 33.3% !important;
+}
+
+.priyashakti {
+	flex-basis: 9.7em !important;
+}
+
+.priyashakti .title {
+	color: #3fff00;
+    background: #7c74f54a;
+	padding: .15em;   
+}
+
+.priyashakti .tag {
+	color: #ff00e0;
+}
+
+.fontwala {
+	flex-basis: 16em !important;
+}
+
+.fontwala .title {
+	background-color: #ff000038;
+}
+
+.fontwala .tag {
+	color: #dec33e;
+}
+
+.themusicinmyblood .title{
+	background-color: #fbfbf930;
+    color: #ff6a00;
+}
+
+.themusicinmyblood .tag {
+	color: #c59f78eb;
+}
+
+.randomfox .title {
+	background-color: #ee730a47;
+    color: #9ef39e;
+}
+
+.randomfox .tag {
+	color: #bab1e0;
+}
+
+.title {
+  	font-size: 1em;
+  	text-align: center;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    line-height: 1.25em;
+    margin: .5em 0 !important;
+    padding: 0.5em 0;
+}
+
+.tag {
+	margin:0 !important;
+	padding:0;
+	line-height:1.25em;
+	font-size:.75em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.next-batch {
+	flex-direction: column !important;
+}
+
+.back h2 {
+	position: fixed;
+    text-align: right !important;
+    width: 100%;
+    text-decoration: none;
+    bottom: 5px;
+    right: 20px;
+    font-size: .85em !important;
+    font-weight: lighter;
+    color: deepskyblue !important;
+}
+
+#priyaPage {
+	padding-top: 2em;
+}
+
+#priyaPage h1 {
+	color: yellow;
+	padding-bottom: .5em;
+}
+
+#priyaPage h2 {
+	color: #e08dba;
+	margin: 0 0 1em 0;
+}
+
+#priyaPage quote {
+	text-align: center;
+    display: inherit;
+    color: #886969;
+}
+
+#priyaPage a,
+#priyaPage p {
+	font-size: 1em !important;
+	color: #8388ad !important;
+	text-align: center;
+}
+
+#priyaPage .project-container {
+	padding-top: 2em;
+}
+
+#priyaPage .project-container div {
+	color: #8388ad;
+	font-size: .85em;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+#priyaPage iframe {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#priyaPage .chapters {
+	display: flex;
+	flex-direction: row;
+}
+
+#priyaPage .chapters a {
+	font-size: 1.2em !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height:1.5em;
+}
+
+.video-scale{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-scale iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+@media screen and (max-width: 992px) {
+  
+  h1 {
+  	font-size: 1.5em;
+  }
+
+  h2 {
+  	margin-left: 40%;
+  }
+
+  quote {
+  	margin: 10px;
+  }
+
+  .project-container {
+  	flex-direction: column;
+  }
+
+
+  .next-batch-img {
+  	flex-direction: column;
+  }
+
+  .next-batch-img img{
+  	width: 100% !important;
+  }
+
+  .back {
+  	font-size: .5em;
+  }
+
+
+	#priyaPage .chapters {
+		flex-direction: column;
+	}
+
+
+}
