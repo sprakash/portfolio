@@ -124,6 +124,13 @@ hr {
 	color: #bab1e0;
 }
 
+.priyashakti:hover,
+.fontwala:hover,
+.themusicinmyblood:hover,
+.randomfox:hover {
+	background-color: #0014ff;
+}
+
 .title {
   	font-size: 1em;
   	text-align: center;
@@ -135,12 +142,13 @@ hr {
 }
 
 .tag {
-	margin:0 !important;
+	margin:0 0 .5em 0!important;
 	padding:0;
 	line-height:1.25em;
 	font-size:.75em;
 	text-transform: uppercase;
 	text-align: center;
+	background-color: #ffffff26;
 }
 
 .next-batch {
@@ -150,13 +158,13 @@ hr {
 .back h2 {
 	position: fixed;
     text-align: right !important;
-    width: 100%;
     text-decoration: none;
-    bottom: 5px;
+    bottom: -40px;
     right: 20px;
     font-size: .85em !important;
     font-weight: lighter;
     color: deepskyblue !important;
+    padding:0 0 3em 0;
 }
 
 #priyaPage {
@@ -168,6 +176,7 @@ hr {
 	padding-bottom: .5em;
 }
 
+#fontwalaPage h2,
 #priyaPage h2 {
 	color: #e08dba;
 	margin: 0 0 1em 0;
@@ -214,6 +223,78 @@ hr {
 	line-height:1.5em;
 }
 
+#fontwalaPage .content-area p:first-child{
+	text-align:justify !important;
+}
+
+.content-area {
+	padding-bottom: 2em;
+}
+
+#fontwalaPage h1 {
+	font-size: 2em;
+    margin-top: 2em;
+    font-weight: bolder;
+    color: #ef1717;
+    letter-spacing: 0em;
+}
+
+#fontwalaPage h2 {
+	color: #dc8314 !important;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#fontwalaPage em,
+#fontwalaPage p {
+	color: #b3a6a6;
+    font-size: .85em;
+    text-align: center;
+    line-height: 1.75em;
+}
+
+#fontwalaPage ul {
+	list-style-type: none;
+}
+
+#fontwalaPage a {
+	color: #f71775fa;
+    font-size: .85em;
+    letter-spacing: .1em;
+}
+
+.social {
+	text-decoration: none;
+	font-weight: lighter;
+	line-height: .5em;
+}
+
+#fontwalaPage ul li {
+	margin-bottom: 1em;
+}
+
+#fontwalaPage ul li a{
+	color: #87b5ee;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: capitalize;
+    line-height: 1.85em;
+}
+
+.image-scale img{
+	width: 60% !important;
+    margin: 0 auto;
+}
+
+.thumbnail-scale {
+	justify-content: space-between;
+}
+
+.thumbnail-scale img {
+	width: 24% !important;
+	border: 1px solid orange;
+}
+
 .video-scale{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -226,6 +307,36 @@ hr {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+.artby {
+	font-size: .5em !important;
+    text-align: center !important;
+    margin-top: .5em;
+    color: #f1d5cbad !important;
+    letter-spacing: .05em;
+}
+
+.playlist {
+	display:block;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.playlist img {
+	width: 60% !important;
+	border: 1px solid orange;
+}
+.two-image-scale {
+	justify-content: space-around;
+}
+.two-image-scale img {
+	width: 50% !important;
+	margin: 0 10px;
+	border: 1px solid orange;
+}
+
+.upnext {
+	text-align: justify !important;
 }
 @media screen and (max-width: 992px) {
   
@@ -258,10 +369,17 @@ hr {
   	font-size: .5em;
   }
 
-
 	#priyaPage .chapters {
 		flex-direction: column;
 	}
 
+	.thumbnail-scale img {
+		width: 100% !important;
+	}
+
+	.two-image-scale img {
+	width: 100% !important;
+	margin-bottom: 10px;
+	}
 
 }
