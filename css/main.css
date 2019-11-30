@@ -128,7 +128,30 @@ hr {
 .fontwala:hover,
 .themusicinmyblood:hover,
 .randomfox:hover {
-	background-color: #0014ff;
+	background-color: #0625bd52;
+}
+
+#musicPage {
+	padding-top: 2em;
+}
+#musicPage h1 {
+	color: #ad2e2e;
+    font-weight: bolder;
+    letter-spacing: 0;
+    font-size: 2em !important;
+    padding-bottom: 0.2em;
+}
+
+#musicPage em {
+	text-align: center;
+    margin: 0 auto;
+    display: inherit;
+    font-size: .85em;
+    color: #b7968a;
+}
+
+#musicPage .video-scale {
+	margin-top:0 !important;
 }
 
 .title {
@@ -155,17 +178,26 @@ hr {
 	flex-direction: column !important;
 }
 
+#musicPage .back h2,
 .back h2 {
 	position: fixed;
     text-align: right !important;
     text-decoration: none;
+    text-transform: lowercase;
     bottom: -40px;
     right: 20px;
     font-size: .85em !important;
     font-weight: lighter;
     color: deepskyblue !important;
     padding:0 0 3em 0;
+    cursor: pointer;
+    z-index: 2;
 }
+
+#musicPage .back h2 {
+	bottom: -14px !important;
+}
+
 
 #priyaPage {
 	padding-top: 2em;
@@ -176,6 +208,7 @@ hr {
 	padding-bottom: .5em;
 }
 
+#musicPage h2,
 #fontwalaPage h2,
 #priyaPage h2 {
 	color: #e08dba;
@@ -245,6 +278,7 @@ hr {
 	text-align: center;
 }
 
+#musicPage p,
 #fontwalaPage em,
 #fontwalaPage p {
 	color: #b3a6a6;
@@ -295,6 +329,26 @@ hr {
 	border: 1px solid orange;
 }
 
+.thumbnail-center {
+	display: inherit;
+}
+
+.thumbnail-center img {
+	width: 20% !important;
+	border: 1px solid coral;
+	display: inherit;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.poster-full img {
+	width: 50% !important;
+}
+
+.poster-full p {
+	text-align: left !important;
+}
+
 .video-scale{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -334,7 +388,26 @@ hr {
 	margin: 0 10px;
 	border: 1px solid orange;
 }
-
+#musicPage h2 {
+	color: #98b3cc;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: .85em;
+}
+#musicPage a {
+	font-size: .75em;
+    text-transform: lowercase;
+    color: #e6d139;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+.block-text {
+	text-align: justify !important;
+}
 .upnext {
 	text-align: justify !important;
 }
@@ -381,5 +454,17 @@ hr {
 	width: 100% !important;
 	margin-bottom: 10px;
 	}
+
+	#musicPage em {
+		font-size: .75em !important;
+	}
+
+	.poster-full img {
+	width: 100% !important;
+}
+
+.poster-full p {
+	text-align: center !important;
+}
 
 }
