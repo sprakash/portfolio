@@ -420,10 +420,6 @@ hr {
     position:absolute;
 }
 
-#randomPage .video-scale {
-	border: 1px solid orange;
-}
-
 #randomPage .video-details em {
 	width: 100%;
 	text-align: justify;
@@ -479,6 +475,11 @@ hr {
 }
 .upnext {
 	text-align: justify !important;
+}
+
+#randomPage .castme img {
+	width: 100% !important;
+	height: auto;
 }
 @media screen and (max-width: 992px) {
   
