@@ -52,6 +52,12 @@ hr {
     color: #e2b19f;
 }
 
+ #randomPage .social,
+ #randomPage a {
+ 	font-size: 1em;
+    color: deepskyblue;
+ }
+
 .next-batch-img,
 .project-container {
 	display: flex;
@@ -72,12 +78,24 @@ hr {
 	width:100%;
 }
 
+#randomPage .project-container div {
+	margin-top: 0 !important;
+}
 
 .next-batch-img {
 	margin:0 !important;
 }
 .next-batch-img img {
 	width: 33.3% !important;
+}
+
+#randomPage .next-batch-img {
+	margin: 1em auto 0 !important;
+}
+
+#randomPage img {
+	width: 20% !important;
+	margin: 1em auto 0 !important;
 }
 
 .priyashakti {
@@ -131,6 +149,7 @@ hr {
 	background-color: #0625bd52;
 }
 
+#randomPage,
 #musicPage {
 	padding-top: 2em;
 }
@@ -152,6 +171,24 @@ hr {
 
 #musicPage .video-scale {
 	margin-top:0 !important;
+}
+
+#randomPage h1 {
+	color: #d46a20;
+    font-weight: bolder;
+    letter-spacing: .1em;
+}
+
+#randomPage h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#randomPage h3 {
+	font-weight: lighter;
+    font-size: .75em;
+    color: #b2eec7;
+    letter-spacing: .1em;
 }
 
 .title {
@@ -178,6 +215,7 @@ hr {
 	flex-direction: column !important;
 }
 
+#randomPage .back h2,
 #musicPage .back h2,
 .back h2 {
 	position: fixed;
@@ -194,6 +232,10 @@ hr {
     z-index: 2;
 }
 
+#randomPage .back h2 {
+	color: #ff009985 !important;
+}
+
 #musicPage .back h2 {
 	bottom: -14px !important;
 }
@@ -208,6 +250,7 @@ hr {
 	padding-bottom: .5em;
 }
 
+#randomPage h2,
 #musicPage h2,
 #fontwalaPage h2,
 #priyaPage h2 {
@@ -278,6 +321,9 @@ hr {
 	text-align: center;
 }
 
+
+#randomPage p, 
+#randomPage em,
 #musicPage p,
 #fontwalaPage em,
 #fontwalaPage p {
@@ -285,6 +331,12 @@ hr {
     font-size: .85em;
     text-align: center;
     line-height: 1.75em;
+}
+
+#randomPage em {
+	display: block;
+    margin: 0 auto;
+    width: 57%;
 }
 
 #fontwalaPage ul {
@@ -340,6 +392,10 @@ hr {
 	margin: 0 auto;
 	text-align: center;
 }
+.list-content {
+	display: flex;
+	flex-direction: column;
+}
 
 .poster-full img {
 	width: 50% !important;
@@ -361,6 +417,18 @@ hr {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+#randomPage .video-scale {
+	border: 1px solid orange;
+}
+
+#randomPage .video-details em {
+	width: 100%;
+	text-align: justify;
+}
+#randomPage ul {
+	list-style-type: none;
 }
 
 .artby {
@@ -438,6 +506,11 @@ hr {
   	width: 100% !important;
   }
 
+	#randomPage .next-batch-img img {
+		width: 25% !important;
+	    margin: 1em auto 0;
+	}
+
   .back {
   	font-size: .5em;
   }
@@ -467,4 +540,37 @@ hr {
 	text-align: center !important;
 }
 
+ #randomPage em {
+ 	display: block;
+    margin: 0 auto;
+    width: 86%;
+    text-align: justify;
+ }
+
+ #randomPage .project-container {
+ 	margin: 0 !important;
+ 	padding: 0 !important;
+ }
+
+
+
+ .list-content {
+ 	flex-direction: column;
+    margin: 1em 0 00 !important;
+ }
+
+ #randomPage .video-scale {
+ 	width: 100% !important;
+ 	margin: 0 !important;
+ }
+
+ #randomPage .video-details {
+ 	margin: 1em 0 2.5em 0;
+ 	padding: 0;
+ }
+
+ #randomPage .video-details em {
+ 	margin: 0;
+ 	padding: 0;
+ }
 }
