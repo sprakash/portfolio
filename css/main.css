@@ -51,6 +51,19 @@ hr {
     color: #e2b19f;
 }
 
+.bottompage,
+.bottompage quote {
+	font-size: .85em;
+	color: grey;
+	margin: 1em auto 0;
+	text-align: center;
+	display: block;
+}
+
+.bottompage a {
+	color: grey;
+	font-size: .95em;
+}
  #randomPage .social,
  #randomPage a {
  	font-size: 1em;
@@ -481,6 +494,8 @@ hr {
 	width: 100% !important;
 	height: auto;
 }
+
+
 @media screen and (max-width: 992px) {
   
   h1 {
