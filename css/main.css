@@ -155,10 +155,10 @@ hr {
 }
 #musicPage h1 {
 	color: #ad2e2e;
-    font-weight: bolder;
-    letter-spacing: 0;
+    font-weight: lighter;
+    letter-spacing: 0.2em;
     font-size: 2em !important;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.5em;
 }
 
 #musicPage em {
@@ -175,8 +175,8 @@ hr {
 
 #randomPage h1 {
 	color: #d46a20;
-    font-weight: bolder;
-    letter-spacing: .1em;
+    font-weight: lighter;
+    letter-spacing: .2em;
 }
 
 #randomPage h2 {
@@ -310,9 +310,9 @@ hr {
 #fontwalaPage h1 {
 	font-size: 2em;
     margin-top: 2em;
-    font-weight: bolder;
+    font-weight: lighter;
     color: #ef1717;
-    letter-spacing: 0em;
+    letter-spacing: .2em;
 }
 
 #fontwalaPage h2 {
@@ -337,6 +337,7 @@ hr {
 	display: block;
     margin: 0 auto;
     width: 57%;
+    text-align: justify;
 }
 
 #fontwalaPage ul {
@@ -566,7 +567,7 @@ hr {
 
  #randomPage .video-details {
  	margin: 1em 0 2.5em 0;
- 	padding: 0;
+ 	padding: 1em 0 0;
  }
 
  #randomPage .video-details em {
