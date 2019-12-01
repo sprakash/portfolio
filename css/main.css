@@ -12,7 +12,6 @@ body {
 h1 {
 	font-size: 2.5em;
     line-height: 1em;
-    letter-spacing: 0.02em;
     font-weight: lighter;
     transition: opacity 250ms ease-out;
     letter-spacing: .25em;
@@ -62,7 +61,7 @@ hr {
 .project-container {
 	display: flex;
 	margin: 0 auto;
-	max-width: 740px;
+	max-width: 786px;
 	cursor: pointer;
 }
 
@@ -317,8 +316,9 @@ hr {
 
 #fontwalaPage h2 {
 	color: #dc8314 !important;
-	font-weight: lighter;
-	text-align: center;
+	font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 
@@ -461,17 +461,17 @@ hr {
 	color: #98b3cc;
     text-transform: uppercase;
     letter-spacing: .15em;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     display: inline-block;
     width: 100%;
     text-align: center;
     font-size: .85em;
 }
 #musicPage a {
-	font-size: .75em;
+	font-size: 1em;
     text-transform: lowercase;
     color: #e6d139;
-    font-weight: bold;
+    font-weight: normal;
     letter-spacing: .1em;
 }
 .block-text {
