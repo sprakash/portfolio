@@ -70,11 +70,26 @@ hr {
     color: deepskyblue;
  }
 
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.projects img {
+	width: 50%;
+}
+
+.projects .sidebar { 
+	width: 20%;
+	margin: 0;
+}
+
 .next-batch-img,
 .project-container {
 	display: flex;
 	margin: 0 auto;
-	max-width: 786px;
+	max-width: 1024px;
 	cursor: pointer;
 }
 
@@ -112,6 +127,15 @@ hr {
 
 .priyashakti {
 	flex-basis: 18.7em !important;
+}
+
+.fontwalaplay {
+	display: flex;
+}
+.fontwalaplay .title {
+	color: #000000;
+    background: #dec33e;
+	margin-bottom: 0 !important;
 }
 
 .priyashakti .title {
@@ -460,13 +484,21 @@ hr {
 }
 
 .artby {
-	font-size: .5em !important;
+	font-size: 1em !important;
     text-align: center !important;
     margin-top: .5em;
     color: #f1d5cbad !important;
     letter-spacing: .05em;
 }
 
+.buy { 
+	font-size: 2em;
+    text-decoration: none;
+    color: #cb9802;
+    background-color: #0f0c0c;
+    padding: 0 1em;
+    border: 2px solid magenta;
+}
 .playlist {
 	display:block;
 	margin-bottom: 1em;
