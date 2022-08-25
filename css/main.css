@@ -20,9 +20,20 @@ h1 {
     text-rendering: optimizeLegibility;
     justify-content: space-between;
     text-align: center;
-    padding: .5em 0 .85em 0;
-    stext-transform: lowercase;
+    padding: .5em 0 0 0;
+    text-transform: lowercase;
     color: #98c3adfa;
+}
+
+h1 strong {
+	font-size: 1.25em;
+    line-height: 1em;
+    font-weight: lighter;
+    text-align: center;
+    padding: .5em 0 0 0;
+    text-transform: lowercase;
+    color: #98c3adfa;
+	letter-spacing: normal !important;
 }
 
 h2 {
@@ -39,7 +50,6 @@ hr {
 
 .top {
 	text-align: center;
-    margin: 0 0 5em;
     font-style: italic;
     font-size: .5em;
 }
@@ -51,15 +61,16 @@ hr {
     color: #e2b19f;
 }
 
+
 .svgStylin {
     display: flex;
 	width: 100%;
     justify-content: center;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 .svgStylin span {
-	padding: 0 0.5em;
+	padding: 0;
     margin: 0 0.25em;
 }
 
@@ -70,9 +81,13 @@ hr {
 }
 
 .svgStylin span img {
-	width: 1.5em;
-    height: 1.5em;
+	width: .85em;
+    height: .85em;
     background-color: #706969;
+}
+
+.svgStylin span img:hover {
+	background-color: rgba(230, 23, 230, 0.619);
 }
 
 
@@ -156,6 +171,7 @@ hr {
 
 .fontwalaplay {
 	display: flex;
+	margin: 0 !important;
 }
 .fontwalaplay .title {
 	color: #000000;
@@ -207,7 +223,6 @@ hr {
 	border: 1px solid yellow;
 }
 
-.fontwalaplay:hover,
 .priyashakti:hover,
 .fontwala:hover,
 .themusicinmyblood:hover,
@@ -538,14 +553,24 @@ hr {
     letter-spacing: .05em;
 }
 
+
 .buy { 
-	font-size: 2em;
+	font-size: 2em !important;
     text-decoration: none;
-    color: #cb9802;
-    background-color: #0f0c0c;
+    background-color: yellow;
     padding: 0 1em;
-    border: 2px solid magenta;
+    border: 2px solid yellow;
 }
+
+.buy a {
+	text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+	background-color: yellow;
+	color: black;
+	font-weight: bold;
+}
+
 .playlist {
 	display:block;
 	margin-bottom: 1em;
