@@ -283,6 +283,10 @@ hr {
     padding: 0.5em 0;
 }
 
+.title strong {
+	padding: 0 2em;
+}
+
 .tag {
 	margin:0 0 .5em 0!important;
 	padding:0;
