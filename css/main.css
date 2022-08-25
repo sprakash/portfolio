@@ -178,6 +178,11 @@ hr {
 	color: #bab1e0;
 }
 
+.fontwalaplay:hover {
+	border: 2px solid yellow;
+}
+
+.fontwalaplay:hover,
 .priyashakti:hover,
 .fontwala:hover,
 .themusicinmyblood:hover,
@@ -545,6 +550,12 @@ hr {
 	height: auto;
 }
 
+@media screen and (max-width: 1280px) {
+	.projects .sidebar { 
+		width: 100%;
+		margin: 0;
+	}
+}
 
 @media screen and (max-width: 992px) {
   
