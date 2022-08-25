@@ -400,14 +400,15 @@ hr {
 }
 
 #fontwalaPage .announce { 
-	color: #e5c676;
+	color: #f0ba30;
     font-size: 1em;
     text-align: center;
-    background-color: #c9136a6b;
+    background-color: #b70f60;
     font-weight: bolder;
-	width: 100%;
-	position: fixed;
-	border: 2px solid white;
+    width: 100%;
+    position: fixed;
+    border: 2px solid white;
+    z-index: 9;
 }
 
 #fontwalaPage .announce strong {
