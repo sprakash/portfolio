@@ -435,7 +435,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3em 0;
+  margin: 3em 0 2em;
 }
 
 #fontwalaPage .pageTitle img {
@@ -446,7 +446,6 @@ hr {
   display: flex;
   justify-content: center;
   font-family: Arial !important;
-  margin-bottom: 3em;
   background-color: black;
   padding: 0.5em 0;
 }
@@ -527,30 +526,30 @@ hr {
   font-weight: 500;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   width: 100%;
+  bottom: 0px;
+  position: fixed;
+  z-index: 2;
+  justify-content: space-around;
+  display: flex;
+  background-color: #938e8963;
 }
 
 #fontwalaPage #navigation ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 1em 1em 1em;
 }
 
 #fontwalaPage #navigation ul li {
-  background: rgb(251, 251, 251);
-  background: radial-gradient(
-    circle,
-    rgba(251, 251, 251, 1) 0%,
-    rgba(235, 237, 240, 1) 100%
-  );
+  background: radial-gradient(circle, rgba(6, 6, 6) 0%, rgba(0, 0, 0) 100%);
   padding: 0 1em;
-  box-shadow: 3px 3px 0px 0px rgb(190 197 224 / 75%);
+  margin: 0 0.05em;
 }
 
 #fontwalaPage #navigation ul li:hover {
-  outline: 1px solid #1a92c6;
-  box-shadow: 3px 3px 0px 0px coral;
+  outline: 2px solid #1a92c6;
+  box-shadow: 0 0 0 15px #ee1b1f;
 }
 
 #fontwalaPage .announce {
@@ -578,6 +577,7 @@ hr {
     rgba(251, 251, 251, 1) 0%,
     rgba(235, 237, 240, 1) 100%
   );
+  padding: 0 2em;
 }
 
 #fontwalaPage .title img {
@@ -601,10 +601,14 @@ hr {
 }
 
 #fontwalaPage h2 {
-  color: #dc8314 !important;
-  font-weight: bolder;
-  text-align: center;
+  outline: 1px solid black;
+  padding: 1em;
+  background: #f4e7f9;
+  bottom: 15px;
+  box-shadow: 0 10px 10px gray;
+  color: #11120b !important;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 #fontwalaContent section {
@@ -617,7 +621,7 @@ hr {
 
 #fontwalaContent section span {
   font-family: "Alex Brush", cursive !important;
-  font-size: 4em;
+  font-size: 5em;
   color: black;
   margin-top: 0.25em;
   text-align: center;
@@ -643,6 +647,8 @@ hr {
 #fontwalaContent ul li {
   color: black;
   text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
 #fontwalaContent .snapshot {
@@ -677,9 +683,14 @@ hr {
   text-align: center;
 }
 
+#fontwalaContent #press p,
 #fontwalaContent #exhibition p {
   margin-bottom: 0.5em;
   display: block;
+}
+
+#fontwalaContent #press p {
+  margin: 0 8em;
 }
 
 #fontwalaContent #exhibition div label {
@@ -739,16 +750,8 @@ hr {
   text-align: center;
 }
 
-#fontwalaContent #exhibition label {
-  color: black !important;
-  width: 100% !important;
-  text-align: center !important;
-  box-shadow: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  font-weight: normal !important;
-  color: black !important;
-  background-color: transparent !important;
+#fontwalaContent #exhibition .community img {
+  width: 50% !important;
 }
 
 #fontwalaContent #exhibition .snapshot,
@@ -758,6 +761,10 @@ hr {
   justify-content: normal;
   padding: 1em 0.5em;
   flex-direction: row !important;
+}
+
+#fontwalaContent #exhibition .snapshot img {
+  width: 25% !important;
 }
 
 #fontwalaContent #ensemblePlay label {
@@ -995,13 +1002,9 @@ hr {
   line-height: 0.5em;
 }
 
-#fontwalaPage ul li {
-  margin-bottom: 1em;
-}
-
 #fontwalaPage ul li a {
-  color: #1a92c6;
-  font-size: 0.85em;
+  color: whitesmoke;
+  font-size: 1.25em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.85em;
@@ -1259,10 +1262,6 @@ hr {
     padding: 0;
   }
 
-  #fontwalaPage .pageTitle img {
-    width: 200%;
-  }
-
   #fontwalaContent section .playContent {
     flex-direction: column !important;
   }
@@ -1274,6 +1273,27 @@ hr {
   }
 
   #fontwalaContent #press .pressList li {
-    width: 75%;
+    width: 30%;
+  }
+
+  #fontwalaPage #navigation ul {
+    width: 100%;
+  }
+
+  #fontwalaPage #navigation ul li {
+    padding: 1em 0;
+    font-size: 2em;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #fontwalaPage #navigation ul li {
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  #fontwalaPage .pageTitle img {
+    width: 200%;
   }
 }
