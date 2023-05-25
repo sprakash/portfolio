@@ -439,7 +439,7 @@ hr {
 }
 
 #fontwalaPage .pageTitle img {
-  width: 60%;
+  width: 40%;
 }
 
 #fontwalaPage #tag {
@@ -474,8 +474,9 @@ hr {
 
 #fontwalaContent .title {
   margin: 0;
-  padding: 0;
+  padding: 0.5em 0;
   background-color: black;
+  border-radius: 30px;
 }
 
 #fontwalaContent section {
@@ -616,7 +617,7 @@ hr {
 
 #fontwalaContent section span {
   font-family: "Alex Brush", cursive !important;
-  font-size: 6em;
+  font-size: 4em;
   color: black;
   margin-top: 0.25em;
   text-align: center;
@@ -686,7 +687,7 @@ hr {
   font-weight: 600;
   letter-spacing: 1px;
   background-color: #eaf5ff;
-  margin-bottom: 1em;
+  margin: 5em 0 1em;
   padding: 0.5em 1em;
   box-shadow: 1px 3px 5px #c72e0c;
   width: 100%;
@@ -770,10 +771,10 @@ hr {
   width: 80%;
 }
 
-#fontwalaContent section #soloPlayShows h2 {
+#fontwalaContent section h2 {
   width: 100%;
   padding: 0.5em 0;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #f3cb09 !important;
   margin: 0.15em 0 !important;
   padding: 0.5em 1em;
@@ -784,35 +785,35 @@ hr {
   flex-direction: column;
 }
 
-#fontwalaContent section #soloPlayShows .playContent {
+#fontwalaContent section .playContent {
   display: flex;
   align-items: flex-start;
   justify-content: space-evenly;
   background-color: black;
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
-#fontwalaContent section #soloPlayShows .playContent img {
+#fontwalaContent section .playContent img {
   margin: inherit inherit 0 0;
   width: 55%;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul {
+#fontwalaContent section .playContent ul {
   background-color: inherit;
   outline: none;
   width: 90%;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul li {
+#fontwalaContent section .playContent ul li {
   text-align: left;
   padding: 0 0.5em;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul li:hover {
+#fontwalaContent section .playContent ul li:hover {
   border: #b4ae72 1px solid;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul li a {
+#fontwalaContent section .playContent ul li a {
   font-size: 1.5em;
   color: #3dc9ec;
   text-transform: lowercase;
@@ -820,12 +821,13 @@ hr {
   justify-content: space-between;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul li a label {
-  color: #b4ae72;
+#fontwalaContent section .playContent ul li a label {
+  color: #b4ae72 !important;
+  cursor: pointer;
 }
 
-#fontwalaContent section #soloPlayShows .playContent ul li a label:hover {
-  color: #d91379;
+#fontwalaContent section .playContent ul li a label:hover {
+  color: #d91379 !important;
 }
 
 #fontwalaContent .booking {
@@ -854,6 +856,73 @@ hr {
 #fontwalaContent .booking label {
   color: black;
   font-size: 0.85em;
+}
+
+#fontwalaContent #press .pressContent {
+  display: block;
+}
+
+#fontwalaContent #press .pressList {
+  list-style-type: none;
+  margin: 2em 1em 0 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background: none;
+  outline: none;
+}
+
+#fontwalaContent #press .pressList li {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 0.5em;
+  width: 25%;
+  cursor: pointer;
+  box-shadow: 0 10px 10px grey;
+}
+
+#fontwalaContent #press .pressList li:hover {
+  background-color: #edbc00;
+}
+
+#fontwalaContent #press .pressList li img {
+  width: auto;
+  margin-bottom: 0.5em;
+}
+
+#fontwalaContent #press .pressList li a {
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding: 1em 0.5em;
+  border-top: 2px solid black;
+  color: black;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+#fontwalaContent #press .pressList li a em {
+  color: rgb(246, 51, 51);
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0.5em;
+  background-color: beige;
+  margin: 0.5em;
+}
+
+#fontwalaContent #press .pressContent span {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 1.5em;
+  background: #f4f6fc;
+  box-shadow: 0 10px 10px 0 grey;
+  margin-bottom: 1em;
+  padding: 0.5em;
 }
 
 #randomPage p,
@@ -1069,6 +1138,14 @@ hr {
     margin: 10px;
   }
 
+  #fontwalaContent section h2 {
+    font-size: 0.75em;
+  }
+
+  #fontwalaContent section div {
+    flex-direction: column;
+  }
+
   .project-container {
     flex-direction: column;
   }
@@ -1151,13 +1228,17 @@ hr {
     width: 200%;
   }
 
-  #fontwalaContent section #soloPlayShows .playContent {
+  #fontwalaContent section .playContent {
     flex-direction: column !important;
   }
 
-  #fontwalaContent section #soloPlayShows .playContent img {
+  #fontwalaContent section .playContent img {
     width: 100%;
     margin-bottom: 0;
     border-bottom: 1px solid whitesmoke;
+  }
+
+  #fontwalaContent #press .pressList li {
+    width: 75%;
   }
 }
