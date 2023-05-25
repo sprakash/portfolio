@@ -739,12 +739,25 @@ hr {
   text-align: center;
 }
 
+#fontwalaContent #exhibition label {
+  color: black !important;
+  width: 100% !important;
+  text-align: center !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: normal !important;
+  color: black !important;
+  background-color: transparent !important;
+}
+
 #fontwalaContent #exhibition .snapshot,
 #fontwalaContent #ensemblePlay .snapshot {
   width: auto;
   display: flex;
   justify-content: normal;
   padding: 1em 0.5em;
+  flex-direction: row !important;
 }
 
 #fontwalaContent #ensemblePlay label {
@@ -923,6 +936,28 @@ hr {
   box-shadow: 0 10px 10px 0 grey;
   margin-bottom: 1em;
   padding: 0.5em;
+}
+
+#fontwalaContent #social {
+  display: flex;
+  flex-direction: column;
+}
+
+#fontwalaContent div {
+  flex-direction: column !important;
+  text-align: center;
+}
+
+#fontwalaContent #social div {
+  justify-content: space-around !important;
+}
+#fontwalaContent #social div img {
+  margin: 0;
+}
+
+#fontwalaContent #social div a {
+  width: 10%;
+  margin-bottom: 1.5em;
 }
 
 #randomPage p,
