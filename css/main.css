@@ -812,6 +812,11 @@ hr {
   margin: 1.5em 0 0.5em;
 }
 
+#whoisfontwala div img,
+#fontwalaContent #ensemblePlay .snapshot img {
+  width: 50%;
+}
+
 #fontwalaContent section #soloPlayShows {
   flex-direction: column !important;
   align-items: center;
@@ -1320,7 +1325,7 @@ hr {
 @media screen and (orientation: landscape) {
   #fontwalaPage #navigation ul li {
     font-size: 0.75em;
-    padding: 0;
+    padding: 0 1em;
   }
 }
 
