@@ -537,7 +537,7 @@ hr {
 }
 
 #fontwalaContent section img {
-  width: 50%;
+  width: 100%;
   margin-bottom: 2em;
 }
 
@@ -937,7 +937,6 @@ hr {
 }
 
 #fontwalaContent #press .pressList li img {
-  width: inherit;
   margin-bottom: 0.5em;
 }
 
@@ -1321,6 +1320,7 @@ hr {
 @media screen and (orientation: landscape) {
   #fontwalaPage #navigation ul li {
     font-size: 0.75em;
+    padding: 0;
   }
 }
 
