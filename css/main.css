@@ -1,12 +1,14 @@
 *,
-html,
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  color: whitesmoke;
-  font-family: "Comfortaa", cursive;
-  display: inline-block;
+  font-size: 18px;
+  background-color: black;
+  font-family: monospace;
 }
 
 head {
@@ -144,6 +146,8 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects img {
@@ -151,7 +155,6 @@ hr {
 }
 
 .projects .sidebar {
-  width: 20%;
   margin: 0;
 }
 
@@ -207,6 +210,7 @@ hr {
   color: #000000;
   background: #dec33e;
   margin-bottom: 0 !important;
+  padding: 0.5em;
 }
 
 .priyashakti .title {
@@ -225,6 +229,7 @@ hr {
 
 .fontwala .title {
   background-color: #ff000038;
+  color: whitesmoke;
 }
 
 .fontwala .tag {
@@ -431,28 +436,45 @@ hr {
   line-height: 1.5em;
 }
 
+#fontwalaPage {
+  background-color: #ffffffed !important;
+  font-family: "Comfortaa", cursive !important;
+  font-size: 16px;
+}
+
+#fontwalaPage li,
+#fontwalaPage a {
+  font-family: "Comfortaa", cursive !important;
+}
+
 #fontwalaPage .pageTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3em 0 2em;
+  background-color: #ffffffed !important;
+  font-family: "Comfortaa", cursive !important;
 }
 
 #fontwalaPage .pageTitle img {
   width: 40%;
+  padding: 3em 0 1.5em;
 }
 
 #fontwalaPage #tag {
   display: flex;
   justify-content: center;
   font-family: Arial !important;
-  background-color: black;
+  background-color: black !important;
   padding: 0.5em 0;
 }
 
 #fontwalaPage div {
   color: whitesmoke;
   list-style-type: none;
+}
+
+#fontwalaPage section {
+  background-color: #ffffffcf !important;
 }
 
 #fontwalaContent {
@@ -464,6 +486,7 @@ hr {
   background-repeat: repeat;
   background-blend-mode: lighten;
   background-color: rgba(255, 255, 255, 0.9);
+  font-family: "Comfortaa", cursive !important;
 }
 
 #fontwalaContent img#angloNagari {
@@ -480,7 +503,12 @@ hr {
 
 #fontwalaContent section {
   border-bottom: 1px solid darkgrey;
-  padding-bottom: 4em;
+  padding: 0 2em 4em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10%;
 }
 
 #fontwalaContent section div {
@@ -561,6 +589,7 @@ hr {
   position: fixed;
   border: 2px solid rgb(65, 32, 32);
   z-index: 9;
+  font-family: "Comfortaa", cursive !important;
 }
 
 #fontwalaPage hr {
@@ -611,14 +640,6 @@ hr {
   font-weight: bolder;
 }
 
-#fontwalaContent section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 10%;
-}
-
 #fontwalaContent section span {
   font-family: "Alex Brush", cursive !important;
   font-size: 5em;
@@ -633,7 +654,7 @@ hr {
   font-size: 1.5em;
   text-align: justify;
   list-style-type: none;
-  margin-bottom: 2em;
+  margin: 1em 0;
 }
 
 #fontwalaContent ul {
@@ -681,6 +702,13 @@ hr {
   line-height: 1.5em;
   display: block;
   text-align: center;
+  margin-bottom: 2.5em;
+}
+
+#fontwalaContent #press {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 #fontwalaContent #press p,
@@ -698,10 +726,10 @@ hr {
   font-weight: 600;
   letter-spacing: 1px;
   background-color: #eaf5ff;
-  margin: 5em 0 1em;
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
   box-shadow: 1px 3px 5px #c72e0c;
   width: 100%;
+  display: block;
 }
 
 #fontwalaContent #exhibition div label span {
@@ -736,7 +764,7 @@ hr {
 #fontwalaContent #exhibition .exhibition-parts p {
   font-size: 1em;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
   text-align: center;
 }
 
@@ -909,7 +937,7 @@ hr {
 }
 
 #fontwalaContent #press .pressList li img {
-  width: auto;
+  width: inherit;
   margin-bottom: 0.5em;
 }
 
@@ -950,6 +978,10 @@ hr {
   flex-direction: column;
 }
 
+#fontwalaContent #social em {
+  color: black;
+}
+
 #fontwalaContent div {
   flex-direction: column !important;
   text-align: center;
@@ -972,7 +1004,7 @@ hr {
 #musicPage p,
 #fontwalaPage em,
 #fontwalaPage p {
-  color: #b3a6a6;
+  color: #ebdada;
   font-size: 0.85em;
   text-align: center;
   line-height: 1.75em;
