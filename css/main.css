@@ -438,13 +438,13 @@ hr {
 
 #fontwalaPage {
   background-color: #ffffffed !important;
-  font-family: "Comfortaa", cursive !important;
+  font-family: "Comfortaa", Helvetica !important;
   font-size: 16px;
 }
 
 #fontwalaPage li,
 #fontwalaPage a {
-  font-family: "Comfortaa", cursive !important;
+  font-family: "Comfortaa", Helvetica !important;
 }
 
 #fontwalaPage .pageTitle {
@@ -452,7 +452,7 @@ hr {
   justify-content: center;
   align-items: center;
   background-color: #ffffffed !important;
-  font-family: "Comfortaa", cursive !important;
+  font-family: "Comfortaa", Helvetica !important;
 }
 
 #fontwalaPage .pageTitle img {
@@ -486,7 +486,7 @@ hr {
   background-repeat: repeat;
   background-blend-mode: lighten;
   background-color: rgba(255, 255, 255, 0.9);
-  font-family: "Comfortaa", cursive !important;
+  font-family: "Comfortaa", Helvetica !important;
 }
 
 #fontwalaContent img#angloNagari {
@@ -589,7 +589,7 @@ hr {
   position: fixed;
   border: 2px solid rgb(65, 32, 32);
   z-index: 9;
-  font-family: "Comfortaa", cursive !important;
+  font-family: "Comfortaa", Helvetica !important;
 }
 
 #fontwalaPage hr {
@@ -641,7 +641,7 @@ hr {
 }
 
 #fontwalaContent section span {
-  font-family: "Alex Brush", cursive !important;
+  font-family: "Alex Brush", Helvetica !important;
   font-size: 5em;
   color: black;
   margin-top: 0.25em;
