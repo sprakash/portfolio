@@ -915,6 +915,10 @@ hr {
   display: block;
 }
 
+#fontwalaContent #press .pressContent em {
+  color: black;
+}
+
 #fontwalaContent #press .pressList {
   list-style-type: none;
   margin: 2em 1em 0 1em;
@@ -980,6 +984,8 @@ hr {
 #fontwalaContent #social {
   display: flex;
   flex-direction: column;
+  background-color: #ffffffcf !important;
+  width: 100%;
 }
 
 #fontwalaContent #social em {
@@ -993,6 +999,8 @@ hr {
 
 #fontwalaContent #social div {
   justify-content: space-around !important;
+  flex-direction: row !important;
+  width: 30%;
 }
 #fontwalaContent #social div img {
   margin: 0;
