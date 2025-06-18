@@ -30,6 +30,35 @@
         gtag('config', 'G-JSSLLQL8YQ');
     </script>
 </head>
+<script>
+    const testimonials = [
+        {
+            text: `“I have worked with Shubhra Prakash as a voice over artist on a series of animated children’s books and films in the USA and India. She has a remarkable range of voices and can gear her talent to many different characters. Creating a dynamic and fun voice that resonates with children is very difficult and Shubhra met all the challenges.”`,
+            author: "— Collaborator, Children's Media"
+        }
+        // You can add more testimonials later:
+        // , { text: "...", author: "— Name" }
+    ];
+
+    let current = 0;
+    const container = document.getElementById("testimonial-container");
+
+    function showNextTestimonial() {
+        container.classList.add("opacity-0");
+        setTimeout(() => {
+            current = (current + 1) % testimonials.length;
+            container.innerHTML = `
+                <p class="text-md italic text-gray-700 max-w-2xl mx-auto px-4">
+                    ${testimonials[current].text}
+                </p>
+                <p class="text-sm mt-2 text-gray-500">${testimonials[current].author}</p>
+            `;
+            container.classList.remove("opacity-0");
+        }, 500);
+    }
+
+    setInterval(showNextTestimonial, 5000);
+</script>
 
 <body class="bg-gray-100 text-gray-900 font-sans">
 
@@ -57,9 +86,9 @@
             </div>
 
         </header>
-        <div class="flex flex-col md:flex-row gap-4 border-t pt-6">
+        <div class="flex flex-col md:flex-row gap-4 border-t">
 
-            <section class="md:w-2/3 my-6">
+            <section class="md:w-2/3 mt-6">
                 <h3 class="text-xl font-semibold mb-2">🎧 Listen to My Work</h3>
                 <hr class="border-gray-300 mb-4">
                 <div>
@@ -93,28 +122,31 @@
                         </iframe>
                     </div>
 
-                    <h2 class="text-2xl font-semibold mt-4">📬 Contact Me</h2>
-                    <p class="text-sm text-gray-500">email: <a href="mailto:shubhra.artist@gmail.com"
-                            class="text-blue-400 underline">shubhra.artist@gmail.com</a></p>
-                    <p class="text-sm text-gray-500 pb-2">instagram: <a href="https://instagram.com/sh000bz.artist"
-                            target="_blank" rel="noopener noreferrer">@sh000bz.artist</a>
-
-                    </p>
-                    <section class="mt-2 pt-1 text-sm text-gray-600 border-t">
-                        <h4 class="font-semibold text-md pt-2">Usage Notice</h4>
-                        <p class="mt-2 text-sm">
-                            All audio samples on this site are intended solely for listening and evaluation by
-                            prospective clients
-                            or collaborators. Unauthorized use — including but not limited to AI voice cloning, machine
-                            learning,
-                            redistribution, or synthesis — is expressly forbidden and may result in legal action.
-                        </p>
-
+                    <section class="mt-8">
+                        <h2 class="text-2xl font-semibold mb-4">💬 Testimonials</h2>
+                        <div class="relative h-48 md:h-40 overflow-hidden">
+                            <div id="testimonial-container"
+                                class="transition-opacity duration-1000 ease-in-out opacity-100">
+                                <p class="text-sm italic text-gray-700 max-w-2xl mx-auto px-4">
+                                    “I have worked with Shubhra Prakash as a voice over artist on a series of animated
+                                    children’s books and films in the USA and India. She has a remarkable range of
+                                    voices and can gear her talent to many different characters. Creating a dynamic and
+                                    fun voice that resonates with children is very difficult and Shubhra met all the
+                                    challenges.”
+                                </p>
+                                <p class="text-sm mt-2 text-gray-500">— Ram Devineni, creator of <a
+                                        class="text-blue-400 underline" href="https://www.priyashakti.com/priyas-shakti"
+                                        target="_blank" rel="noopener noreferrer">Priya's
+                                        Shakti</a> comic
+                                    series at <a class="text-blue-400 underline"
+                                        href="https://www.rattapallax.com/">Rattapallax</a></p>
+                            </div>
+                        </div>
                     </section>
             </section>
 
 
-            <section class="md:w-1/3  my-6">
+            <section class="md:w-1/3  mt-6">
                 <h2 class="text-2xl font-semibold mb-4 text-center">🎙️ About Me</h2>
                 <div class="my-4 flex justify-center">
                     <div class="relative w-1/2"
@@ -149,7 +181,12 @@
                         audition and
                         deliver broadcast-quality work reliably and can also record at studios in New York if needed.
                     </p>
-
+                    <h2 class="text-2xl font-semibold mt-2">📬 Contact Me</h2>
+                    <p class="text-sm text-gray-500">email: <a href="mailto:shubhra.artist@gmail.com"
+                            class="text-blue-400 underline">shubhra.artist@gmail.com</a></p>
+                    <p class="text-sm text-gray-500 pb-2">instagram: <a href="https://instagram.com/sh000bz.artist"
+                            target="_blank" rel="noopener noreferrer">@sh000bz.artist</a>
+                    </p>
                 </div>
 
 
@@ -157,6 +194,16 @@
 
             </section>
         </div>
+        <section class="mt-2 pt-1 text-sm text-gray-600 border-t">
+            <h4 class="font-semibold text-md pt-2">Usage Notice</h4>
+            <p class="mt-2 text-sm">
+                All audio samples on this site are intended solely for listening and evaluation by
+                prospective clients
+                or collaborators. Unauthorized use — including but not limited to AI voice cloning, machine
+                learning,
+                redistribution, or synthesis — is expressly forbidden and may result in legal action.
+            </p>
+        </section>
 
 
 
