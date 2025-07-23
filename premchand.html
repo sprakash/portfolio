@@ -1,188 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Premchand Project | Shubhra Prakash</title>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #fffaf4;
-      color: #333;
-    }
-    header, section {
-      padding: 2em;
-      max-width: 800px;
-      margin: auto;
-    }
-    header {
-      background: #f0e6dc;
-      border-bottom: 1px solid #ccc;
-    }
-    h1, h2 {
-      font-family: 'Helvetica Neue', sans-serif;
-      color: #222;
-    }
-    .term-table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 1em;
-    }
-    .term-table th, .term-table td {
-      border: 1px solid #aaa;
-      padding: 0.5em;
-      text-align: left;
-    }
-    .photo {
-      text-align: center;
-      margin: 2em 0;
-    }
-    .photo img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .word-list ul {
-      list-style: square;
-      margin-left: 1.5em;
-    }
-    .cta, .mailing, .contact {
-      background: #f9f3ef;
-      border: 1px solid #ddd;
-      padding: 1.5em;
-      margin-top: 2em;
-      border-radius: 8px;
-    }
-    a {
-      color: #00557f;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
-      color: #777;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 0.7em;
-      margin-top: 0.5em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    button {
-      margin-top: 1em;
-      padding: 0.7em 1.2em;
-      background: #00557f;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #003d5c;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premchand’s Some Thoughts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 font-serif leading-relaxed min-h-screen">
 
-<header>
-  <h1>Reading Premchand: A Bilingual Exploration</h1>
-  <table class="term-table">
-    <tr>
-      <th>Term</th><th>Meaning</th>
-    </tr>
-    <tr>
-      <td><strong>Transliteration</strong></td>
-      <td>Writing the original sounds/letters of one language in another script. <br>📝 Example: “कर्म” → “karma”</td>
-    </tr>
-    <tr>
-      <td><strong>Translation</strong></td>
-      <td>Rendering the meaning of text in another language.</td>
-    </tr>
-    <tr>
-      <td><strong>Literal Translation</strong></td>
-      <td>A word-for-word or very close translation, often preserving original structure.</td>
-    </tr>
-  </table>
-</header>
+  <header class="bg-gray-800 shadow-md text-center py-6 px-4">
+    <h1 class="text-4xl font-semibold mb-2">Bilingual Sutradhaar (सूत्रधार)</h1>
+    <p class="text-lg text-gray-300">A discourse on storytelling, language, and meaning</p>
+  </header>
 
-<section>
-  <div class="photo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Munshi_Premchand.jpg" alt="Premchand" />
-    <p><em>Premchand, the voice of realism in Hindi-Urdu literature.</em></p>
-  </div>
+  <main class="max-w-6xl mx-auto px-6 py-10">
 
-  <h2>📖 Download My Literal Translation</h2>
-  <p>
-    <a href="/downloads/Premchand_SomeThoughts_LiteralTranslation.pdf" download>Click here to download "Some Thoughts" – literal translation by Shubhra Prakash</a>
-  </p>
+    <!-- Video + Terminology side by side -->
+    <section class="flex flex-col md:flex-row md:space-x-8 mb-16">
 
-  <h2>🎥 Watch My Reflections on YouTube</h2>
-  <p>
-    I’m sharing my takeaways, interpretations, and inspirations from this work. <br>
-    👉 <a href="https://youtube.com/playlist?list=YOUR_PLAYLIST_ID" target="_blank">Watch the video series on YouTube</a>
-  </p>
+      <!-- Video left -->
+      <div class="md:w-4/5 mb-6 md:mb-0">
+        <video
+          class="w-full border border-gray-700 rounded-md shadow-md"
+          autoplay
+          loop
+          muted
+          playsinline
+          preload="auto"
+          controls
+        >
+          <source src="vid/premchand.webm" type="video/webm" />
+          <source src="vid/premchand.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-  <h2>🧩 Words Google Translate Missed</h2>
-  <div class="word-list">
-    <ul>
-      <li>अदब – refined moral etiquette, not just “literature”</li>
-      <li>जज़्बा – intense feeling or passion</li>
-      <li>फ़िक़्र – concern, worry with an intellectual tint</li>
-      <li>ख़्यालात – nuanced thoughts or musings</li>
-    </ul>
-  </div>
+      <!-- Terminology right -->
+      <div class="md:w-full px-6">
+        <h5 class="text-xl font-semibold white mb-6">terminology</h5>
 
-  <h2>🎭 Fontwala & Premchand</h2>
-  <div class="photo">
-    <img src="/images/fontwala-performance.jpg" alt="Fontwala Solo Play" />
-    <p><em>Scene from Fontwala – featuring Premchand’s quote on language and justice.</em></p>
-    <p><a href="/fontwala.html">Learn more about Fontwala</a></p>
-  </div>
+        <div class="flex-row">
+          <div class="mb-4">
+            <span class="white">1. <i>transliteration</i> : writing the original sounds/letters of one language in another script, 📝 example: “कर्म” → “karma”</span>
+          </div>
 
-  <h2>👩‍💻 About Me</h2>
-  <p>
-    I’m Shubhra Prakash, a writer, performer, and developer who finds deep joy at the intersection of language, emotion, and identity. Through this work, I aim to share the experience of reading great stories in their original language, and uncover their cultural depth.
-  </p>
+          <div class="mb-4">
+            <span class="white">2. <i>translation</i> : rendering the meaning of text in another language.</span>
+          </div>
 
-  <div class="mailing">
-    <h2>📬 Sign Up for My Upcoming Book</h2>
-    <p>A book of short essays in English and Hindi exploring bilinguality, immigration, the idea of home, and the intimacy of language.</p>
-    <form action="https://yourmailinglistservice.com/signup" method="POST">
-      <label>Email:</label>
-      <input type="email" name="email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
+          <div class="mb-4">
+            <span class="white">3. <i>literal translation</i> : a word-for-word or very close translation, often preserving original structure.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="contact">
-    <h2>🗣️ Learn Hindi Through Stories</h2>
-    <p>
-      Want to learn Hindi so you can read rich literature like Premchand’s stories? My approach helps you build vocabulary **emotionally** — through characters, settings, and cultural nuance.
-    </p>
-    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-      <label>Your Name:</label>
-      <input type="text" name="name" required>
-      <label>Your Email:</label>
-      <input type="email" name="email" required>
-      <label>Message:</label>
-      <textarea name="message" rows="4" placeholder="Tell me why you’re interested in learning Hindi..."></textarea>
-      <button type="submit">Contact Me</button>
-    </form>
-  </div>
-</section>
+    <!-- Card layout for remaining content -->
+    <section class="flex flex-wrap gap-6 justify-center">
 
-<footer>
-  &copy; 2025 Shubhra Prakash | All Rights Reserved
-</footer>
+      <!-- Untranslatable Words -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full md:w-[48%] lg:w-[31%]">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-3">Untranslatable Words</h2>
+        <p class="mb-4">A list of Hindi/Urdu words from the speeches that resisted easy translation.</p>
+        <a
+          href="#"
+          class="inline-block bg-gray-700 text-gray-100 rounded px-4 py-2 hover:bg-gray-600 transition"
+        >
+          Download PDF
+        </a>
+        <p class="mt-3 text-gray-400 text-sm">Note: In 2019–2020, Google Translate was used.</p>
+      </div>
+
+      <!-- Fontwala -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full md:w-[48%] lg:w-[31%]">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-3">Fontwala</h2>
+        <p class="mb-4">Explore how Premchand’s quote appears in the play:</p>
+        <a
+          href="#"
+          class="inline-block bg-gray-700 text-gray-100 rounded px-4 py-2 hover:bg-gray-600 transition"
+        >
+          Watch Fontwala Trailer
+        </a>
+        <div class="mt-4 text-sm">
+          <p><strong>English Solo Play:</strong> Trailer, Show History</p>
+          <p><strong>Hindi Ensemble Play:</strong> Photos, Videos</p>
+        </div>
+      </div>
+
+      <!-- About Me -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full md:w-[48%] lg:w-[31%]">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-3">About Me</h2>
+        <p>I am a storyteller, actor, and language enthusiast committed to bringing the depth of Hindi literature to broader audiences.</p>
+      </div>
+
+      <!-- Language Collaboration -->
+      <div class="bg-gray-800 rounded-lg shadow-md p-6 w-full md:w-[48%] lg:w-[31%]">
+        <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-3">Language Collaboration</h2>
+        <p>Learn Hindi in a way that connects you emotionally with the language through its rich literary tradition. Stories guide vocabulary and comprehension naturally and meaningfully.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="bg-gray-800 text-gray-400 text-center py-8 mt-20">
+    <p>&copy; 2025 Premchand Discourse | Designed with <span class="text-red-500">❤️</span></p>
+  </footer>
 
 </body>
 </html>
