@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Premchand’s Some Thoughts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        noto: ['"Noto Serif"', 'serif'],
+                        inter: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fffaf0',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-brand-50 text-gray-800 font-noto min-h-screen">
+    <header class="bg-white shadow-lg text-center py-10 px-6 border-b border-brand-100">
+        <h1 class="text-5xl font-bold text-brand-700">Bilingual Sutradhaar (सूत्रधार)</h1>
+        <p class="text-xl text-gray-600 mt-4 mb-2">A discourse on storytelling, language, and meaning</p>
+        <p class="italic text-gray-500 max-w-3xl mx-auto">
+            An aspiring writer's run-in with Premchand's speeches to writer's society in late 1800s India. <br />
+            Shubhra Prakash is a theatre artist who writes stories in English that have Hindi—and aspires to write plays
+            in Hindi with English.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <div class="lg:w-2/3 space-y-10">
+                <section>
+                    <video class="w-full border border-gray-300 rounded-xl shadow-md" autoplay loop muted playsinline
+                        controls>
+                        <source src="vid/premchand.webm" type="video/webm" />
+                        <source src="vid/premchand.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="text-sm text-gray-700 mt-3">
+                        <span class="font-semibold">Terminology</span>: <i>transliteration</i> 📝 — writing the original
+                        sounds of one language in another script (e.g., "कर्म" → "karma").
+                        <i>Translation</i> — rendering meaning in another language. <i>Literal translation</i> — close
+                        to word-for-word, preserving structure.
+                    </p>
+                </section>
+
+                <!-- Cards Section -->
+                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cards">
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">📕 Download Book</h3>
+                        <p class="text-sm text-gray-700 mb-2">Literal translation of Premchand's <i>Some Thoughts</i>
+                        </p>
+                        <a href="downloads/premchand_some_thoughts.pdf" download
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">Download
+                            PDF</a>
+                    </div>
+
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">📺 YouTube Series</h3>
+                        <p class="text-sm text-gray-700 mb-2">Reflections on Premchand's ideas</p>
+                        <a href="https://youtube.com/playlist?list=XYZ" target="_blank"
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">Watch
+                            Series</a>
+                    </div>
+
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">🗂 Archive Dive</h3>
+                        <p class="text-sm text-gray-700 mb-2">Look at the original text and drafts</p>
+                        <a href="archive.html"
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">Visit
+                            Archive</a>
+                    </div>
+
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">🎙️ Interviews</h3>
+                        <p class="text-sm text-gray-700 mb-2">Discussions with writers and translators</p>
+                        <a href="interviews.html"
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">Watch
+                            & Read</a>
+                    </div>
+
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">🎭 Fontwala</h3>
+                        <p class="text-sm text-gray-700 mb-2">A stage play around Indian language computing</p>
+                        <a href="fontwala.html"
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">View
+                            Project</a>
+                    </div>
+
+                    <div class="bg-white border border-brand-200 rounded-xl p-4 shadow hover:shadow-md transition">
+                        <h3 class="font-bold text-lg text-brand-800 mb-2">👩🏽 About Shubhra</h3>
+                        <p class="text-sm text-gray-700 mb-2">Writer, performer, and translator</p>
+                        <a href="about.html"
+                            class="inline-block bg-brand-500 text-white px-3 py-1 rounded hover:bg-brand-600 transition">Read
+                            Bio</a>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar Explore -->
+            <aside class="lg:w-1/3 font-inter">
+                <div class="bg-white border border-gray-200 rounded-xl shadow-md p-6">
+                    <h3 class="text-2xl font-bold text-brand-800 mb-4 flex items-center gap-2"><i
+                            class="fas fa-compass"></i> Explore</h3>
+                    <div class="space-y-3">
+                        <a href="#cards"
+                            class="flex items-center gap-3 p-3 bg-brand-100 rounded-lg hover:bg-brand-200 transition">
+                            <span class="text-xl">📚</span> All Resources
+                        </a>
+                        <a href="https://instagram.com/bilingual_charcha" target="_blank"
+                            class="flex items-center gap-3 p-3 bg-brand-100 rounded-lg hover:bg-brand-200 transition">
+                            <span class="text-xl"><i class="fab fa-instagram"></i></span> @bilingual_charcha
+                        </a>
+                        <a href="#"
+                            class="flex items-center gap-3 p-3 bg-brand-100 rounded-lg hover:bg-brand-200 transition">
+                            <span class="text-xl">🖋️</span> Literary Process
+                        </a>
+                        <a href="mailto:shubhra@example.com"
+                            class="flex items-center gap-3 p-3 bg-brand-100 rounded-lg hover:bg-brand-200 transition">
+                            <span class="text-xl">📩</span> Contact Shubhra
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="bg-brand-100 border-t border-brand-200 text-gray-700 text-center py-8">
+        <p class="text-sm">&copy; 2025 Premchand Discourse | Designed with <span class="text-red-500">&hearts;</span> by
+            Shubhra Prakash</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
