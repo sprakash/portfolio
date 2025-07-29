@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Premchand: Thoughts & Translations</title>
+    <title>Fontwala | A Play by Shubhra Prakash</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -12,146 +12,134 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['Georgia', 'serif'],
+                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
                     },
-                },
-            },
+                    colors: {
+                        cream: '#eee7d6'
+                    }
+                }
+            }
         };
     </script>
-    <style>
-        .lang-toggle [data-lang] {
-            display: none;
-        }
-
-        .lang-en [data-lang="en"],
-        .lang-hi [data-lang="hi"] {
-            display: block;
-        }
-    </style>
 </head>
 
-<body
-    class="bg-yellow-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-serif transition-colors duration-300 lang-en">
-    <!-- Top Bar with Toggles -->
-    <div class="flex justify-end gap-4 px-4 py-2 text-sm bg-yellow-100 dark:bg-gray-800">
-        <button id="themeToggle"
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600">
-            🌗 Toggle Theme
+<body class="bg-cream text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-serif">
+    <header class="w-full px-6 py-4 bg-white dark:bg-gray-800 shadow-md flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Fontwala</h1>
+        <button id="darkToggle"
+            class="text-sm px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+            Toggle Dark Mode
         </button>
-        <button id="languageToggle"
-            class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600">
-            🌐 हिंदी / English
-        </button>
-    </div>
-
-    <!-- Header -->
-    <header class="bg-yellow-100 dark:bg-gray-800 py-10 shadow-md">
-        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center md:gap-8">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Premchand_Stamp_1976.jpg/440px-Premchand_Stamp_1976.jpg"
-                alt="Premchand"
-                class="w-40 h-auto rounded-lg border-4 border-yellow-200 dark:border-gray-600 shadow-lg mb-6 md:mb-0" />
-            <div class="text-center md:text-left">
-                <h1 class="text-3xl md:text-4xl font-semibold mb-2">Premchand: Thoughts & Translations</h1>
-                <p class="text-lg max-w-2xl">
-                    <span data-lang="en">A reflection space on the voice and legacy of one of India's greatest
-                        storytellers — presented bilingually.</span>
-                    <span data-lang="hi">भारत के महानतम कहानीकार प्रेमचंद की विरासत और विचारों पर एक दार्शनिक
-                        झलक।</span>
-                </p>
-            </div>
-        </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-4xl mx-auto px-4 py-10 space-y-16 lang-toggle">
-        <!-- Download Section -->
+    <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- About the Play -->
         <section>
-            <h2 class="text-2xl font-semibold mb-2">
-                <span data-lang="en">📘 Download: Literal Translation</span>
-                <span data-lang="hi">📘 डाउनलोड: मूल अनुवाद</span>
-            </h2>
-            <p class="mb-4" data-lang="en">
-                Read a direct translation of Premchand’s “Some Thoughts” — a rare glimpse into the writer’s own voice.
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">🎭 About the Play</h2>
+            <p>
+                In 1990s India, Fontwala is an aspiring typographer and font designer of Indian languages who designs
+                the
+                Anglo Nagari Keyboard, one of the first software that allows typing of Indian scripts on the Latin-based
+                keyboard. In the present time, Shilpi, Fontwala’s niece, has returned to India after two decades in the
+                US to
+                write his story. Through her journey, the play explores memory, language, technology, and legacy.
             </p>
-            <p class="mb-4" data-lang="hi">
-                प्रेमचंद की "कुछ विचार" का एक प्रत्यक्ष अनुवाद — लेखक की मूल आवाज़ में एक दुर्लभ झलक।
+        </section>
+
+        <!-- Reviews -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">⭐ Reviews</h2>
+            <ul class="space-y-4">
+                <li><em>"A powerful meditation on technology and memory."</em> – The Hindu</li>
+                <li><em>"Shubhra Prakash brings a rare honesty and intimacy to the stage."</em> – Scroll.in</li>
+            </ul>
+        </section>
+
+        <!-- Clips -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">🎬 Clips from Performances</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/6bweHT3pMh8" title="Fontwala Trailer" frameborder="0"
+                        allowfullscreen class="w-full h-full"></iframe>
+                </div>
+                <!-- Add more clips below if needed -->
+            </div>
+        </section>
+
+        <!-- Literary Research -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">📚 Literary & Historical Research</h2>
+            <p>
+                The play is informed by research into the evolution of Devanagari typefaces, the politics of
+                digitization, and
+                the personal archives of Rajeev Prakash. View related blog posts and documentation:
             </p>
-            <a href="PATH_TO_YOUR_TRANSLATION_PDF"
-                class="inline-block px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
-                Download PDF / पीडीएफ डाउनलोड करें
+            <a href="https://shubhraprakash.blogspot.com" target="_blank"
+                class="mt-2 inline-block px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                Visit Blog
             </a>
         </section>
 
-        <!-- YouTube Section -->
+        <!-- About Me -->
         <section>
-            <h2 class="text-2xl font-semibold mb-2">
-                <span data-lang="en">🎥 Reflections on YouTube</span>
-                <span data-lang="hi">🎥 यूट्यूब पर चिंतन</span>
-            </h2>
-            <p class="mb-4" data-lang="en">
-                Explore video reflections, interpretations, and thoughts from the book <em>Some Thoughts</em>.
-            </p>
-            <p class="mb-4" data-lang="hi">
-                "कुछ विचार" पुस्तक से वीडियो विचार और व्याख्याएँ देखें।
-            </p>
-            <div class="w-full aspect-w-16 aspect-h-9">
-                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Premchand Reflections"
-                    class="w-full h-full rounded-lg shadow-md" allowfullscreen></iframe>
-            </div>
-            <p class="mt-3 text-blue-600 hover:underline">
-                <a href="https://www.youtube.com/YOUR_CHANNEL_LINK" target="_blank">
-                    <span data-lang="en">→ View full YouTube series</span>
-                    <span data-lang="hi">→ पूरी यूट्यूब श्रृंखला देखें</span>
-                </a>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">👩‍🎤 About Shubhra</h2>
+            <p>
+                Shubhra Prakash is a writer and performer whose work bridges Indian cultural heritage and contemporary
+                issues.
+                She is the creator of Fontwala and co-author of <em>Priya’s Mask</em>, featured by NPR and BBC. Her
+                theater and
+                media projects seek to amplify voices that question the status quo.
             </p>
         </section>
 
-        <!-- Language Learners Highlight Box -->
-        <section
-            class="bg-white dark:bg-gray-800 border-l-8 border-yellow-400 dark:border-yellow-600 p-6 rounded-lg shadow-sm">
-            <h2 class="text-2xl font-semibold mb-3">
-                <span data-lang="en">🌱 For Language Learners</span>
-                <span data-lang="hi">🌱 भाषा सीखने वालों के लिए</span>
-            </h2>
-            <p class="mb-4" data-lang="en">
-                If you're learning Hindi or Urdu, this is a great space to explore the beauty of language and
-                literature.
+        <!-- About Fontwala -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">🧠 About Fontwala (Rajeev Prakash)</h2>
+            <p>
+                Fontwala (Rajeev Prakash) began painting hand-lettered ads in India in the 1970s, later designing fonts
+                for
+                Devanagari scripts in the digital age. His innovations contributed to early multilingual computing in
+                India.
             </p>
-            <p class="mb-4" data-lang="hi">
-                यदि आप हिंदी या उर्दू सीख रहे हैं, तो यह साहित्य और भाषा की सुंदरता का अनुभव करने का एक सुंदर माध्यम है।
-            </p>
-            <ul class="list-disc pl-6 space-y-1">
-                <li data-lang="en">Literal vs interpretive translation techniques</li>
-                <li data-lang="hi">शाब्दिक बनाम व्याख्यात्मक अनुवाद तकनीक</li>
-                <li data-lang="en">Key grammar and vocabulary notes</li>
-                <li data-lang="hi">मुख्य व्याकरण और शब्दावली टिप्स</li>
-                <li data-lang="en">Contextual cues from South Asian culture</li>
-                <li data-lang="hi">दक्षिण एशियाई संस्कृति के संदर्भ संकेत</li>
+        </section>
+
+        <!-- Show Timeline -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">📅 Timeline of Shows</h2>
+            <ul class="list-disc pl-5">
+                <li><strong>2022</strong> – Work-in-progress reading at The Tank, NYC</li>
+                <li><strong>2023</strong> – Premiere at India Center, NY</li>
+                <li><strong>2024</strong> – Hindi ensemble version at Delhi Literature Festival</li>
             </ul>
         </section>
+
+        <!-- What's Next -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">🔮 What's Next</h2>
+            <p>
+                Fontwala is being developed into a multilingual digital archive and a touring theatrical experience
+                across the
+                US and India. Follow for updates and upcoming performances.
+            </p>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2 class="text-xl font-bold border-b pb-2 mb-3">📬 Contact</h2>
+            <a href="mailto:shubhra.artist@gmail.com?subject=Fontwala Inquiry"
+                class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                Email Shubhra
+            </a>
+        </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-yellow-100 dark:bg-gray-800 text-center text-sm text-gray-600 dark:text-gray-300 py-6 mt-10">
-        &copy; 2025 Bilingual Reflections | Created by Shubhra Prakash
-    </footer>
-
-    <!-- Scripts -->
     <script>
-        // Dark mode toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const root = document.documentElement;
-        themeToggle.addEventListener('click', () => {
-            root.classList.toggle('dark');
-            localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-        });
-        if (localStorage.getItem('theme') === 'dark') root.classList.add('dark');
-
-        // Language toggle
-        const langToggle = document.getElementById('languageToggle');
-        langToggle.addEventListener('click', () => {
-            document.body.classList.toggle('lang-en');
-            document.body.classList.toggle('lang-hi');
+        const toggle = document.getElementById('darkToggle');
+        toggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
         });
     </script>
 </body>
