@@ -1,147 +1,109 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fontwala | A Play by Shubhra Prakash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fontwala — A Tale in Two Languages (Black Dark Mode)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
-                    },
-                    colors: {
-                        cream: '#eee7d6'
-                    }
-                }
-            }
-        };
-    </script>
+    <style>
+        .h-screen-custom {
+            height: 100dvh;
+        }
+    </style>
 </head>
 
-<body class="bg-cream text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-serif">
-    <header class="w-full px-6 py-4 bg-white dark:bg-gray-800 shadow-md flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Fontwala</h1>
+<body class="bg-black text-yellow-300 transition-colors duration-500">
+
+    <!-- Dark mode toggle -->
+    <div class="fixed top-4 right-4 z-50">
         <button id="darkToggle"
-            class="text-sm px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-            Toggle Dark Mode
+            class="bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow-md hover:bg-yellow-300 transition">
+            Toggle Dark/Light
         </button>
+    </div>
+
+    <!-- Header -->
+    <header class="text-center py-8 bg-black/90 shadow-md backdrop-blur-sm">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-yellow-400">
+            Fontwala: A Tale Told Twice
+        </h1>
+        <p class="mt-2 text-lg text-yellow-300">
+            One story. Two tongues. Solo in English. Ensemble in Hindi.
+        </p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-8 space-y-12">
+    <!-- Split layout -->
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
 
-        <!-- About the Play -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">🎭 About the Play</h2>
-            <p>
-                In 1990s India, Fontwala is an aspiring typographer and font designer of Indian languages who designs
-                the
-                Anglo Nagari Keyboard, one of the first software that allows typing of Indian scripts on the Latin-based
-                keyboard. In the present time, Shilpi, Fontwala’s niece, has returned to India after two decades in the
-                US to
-                write his story. Through her journey, the play explores memory, language, technology, and legacy.
+        <!-- English Solo -->
+        <section
+            class="bg-neutral-900 flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-400">
+                🇺🇸 Solo Version (English)
+            </h2>
+            <p class="max-w-md text-yellow-300">
+                A minimalist performance of voice and presence. Touring across the U.S.
             </p>
-        </section>
-
-        <!-- Reviews -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">⭐ Reviews</h2>
-            <ul class="space-y-4">
-                <li><em>"A powerful meditation on technology and memory."</em> – The Hindu</li>
-                <li><em>"Shubhra Prakash brings a rare honesty and intimacy to the stage."</em> – Scroll.in</li>
-            </ul>
-        </section>
-
-        <!-- Clips -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">🎬 Clips from Performances</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="https://www.youtube.com/embed/6bweHT3pMh8" title="Fontwala Trailer" frameborder="0"
-                        allowfullscreen class="w-full h-full"></iframe>
-                </div>
-                <!-- Add more clips below if needed -->
-            </div>
-        </section>
-
-        <!-- Literary Research -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">📚 Literary & Historical Research</h2>
-            <p>
-                The play is informed by research into the evolution of Devanagari typefaces, the politics of
-                digitization, and
-                the personal archives of Rajeev Prakash. View related blog posts and documentation:
-            </p>
-            <a href="https://shubhraprakash.blogspot.com" target="_blank"
-                class="mt-2 inline-block px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-                Visit Blog
+            <a href="#english"
+                class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">
+                Explore English
             </a>
         </section>
 
-        <!-- About Me -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">👩‍🎤 About Shubhra</h2>
-            <p>
-                Shubhra Prakash is a writer and performer whose work bridges Indian cultural heritage and contemporary
-                issues.
-                She is the creator of Fontwala and co-author of <em>Priya’s Mask</em>, featured by NPR and BBC. Her
-                theater and
-                media projects seek to amplify voices that question the status quo.
+        <!-- Hindi Ensemble -->
+        <section class="bg-neutral-800 flex flex-col justify-center items-center p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-300">
+                🇮🇳 Ensemble Version (Hindi)
+            </h2>
+            <p class="max-w-md text-yellow-200">
+                A rich collective storytelling with multiple voices and instruments. Touring India.
             </p>
-        </section>
-
-        <!-- About Fontwala -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">🧠 About Fontwala (Rajeev Prakash)</h2>
-            <p>
-                Fontwala (Rajeev Prakash) began painting hand-lettered ads in India in the 1970s, later designing fonts
-                for
-                Devanagari scripts in the digital age. His innovations contributed to early multilingual computing in
-                India.
-            </p>
-        </section>
-
-        <!-- Show Timeline -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">📅 Timeline of Shows</h2>
-            <ul class="list-disc pl-5">
-                <li><strong>2022</strong> – Work-in-progress reading at The Tank, NYC</li>
-                <li><strong>2023</strong> – Premiere at India Center, NY</li>
-                <li><strong>2024</strong> – Hindi ensemble version at Delhi Literature Festival</li>
-            </ul>
-        </section>
-
-        <!-- What's Next -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">🔮 What's Next</h2>
-            <p>
-                Fontwala is being developed into a multilingual digital archive and a touring theatrical experience
-                across the
-                US and India. Follow for updates and upcoming performances.
-            </p>
-        </section>
-
-        <!-- Contact -->
-        <section>
-            <h2 class="text-xl font-bold border-b pb-2 mb-3">📬 Contact</h2>
-            <a href="mailto:shubhra.artist@gmail.com?subject=Fontwala Inquiry"
-                class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-                Email Shubhra
+            <a href="#hindi"
+                class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">
+                Explore Hindi
             </a>
         </section>
-
     </main>
 
+    <!-- Placeholder sections -->
+    <section id="english" class="p-12 bg-neutral-900 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">🎭 English Solo</h3>
+        <p class="max-w-3xl">Include reviews, tour dates, video highlights, performer bios here...</p>
+    </section>
+
+    <section id="hindi" class="p-12 bg-neutral-800 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">🎭 Hindi Ensemble</h3>
+        <p class="max-w-3xl">Include rehearsal photos, cast list, language reflections, performance videos...</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-sm py-6 bg-black text-yellow-400">
+        © 2025 Fontwala. Designed for a dual world.
+    </footer>
+
     <script>
-        const toggle = document.getElementById('darkToggle');
-        toggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
+        const toggleBtn = document.getElementById('darkToggle');
+        const htmlEl = document.documentElement;
+
+        // Simple toggle between black dark mode and light mode
+        toggleBtn.addEventListener('click', () => {
+            if (document.body.classList.contains('bg-black')) {
+                // Switch to light mode
+                document.body.classList.remove('bg-black', 'text-yellow-300');
+                document.body.classList.add('bg-white', 'text-gray-900');
+                toggleBtn.classList.remove('bg-yellow-400', 'text-black');
+                toggleBtn.classList.add('bg-indigo-600', 'text-white');
+            } else {
+                // Switch back to black dark mode
+                document.body.classList.remove('bg-white', 'text-gray-900');
+                document.body.classList.add('bg-black', 'text-yellow-300');
+                toggleBtn.classList.remove('bg-indigo-600', 'text-white');
+                toggleBtn.classList.add('bg-yellow-400', 'text-black');
+            }
         });
     </script>
+
 </body>
 
 </html>
