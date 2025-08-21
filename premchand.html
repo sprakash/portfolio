@@ -80,17 +80,7 @@
 </head>
 
 <body class="bg-gray-900 text-yellow-400 leading-relaxed min-h-screen font-georgia">
-  <header class=" py-8 bg-gray-900 w-full">
-    <div class="text-center">
-      <h1 class="text-3xl md:text-4xl font-semibold mb-2">Premchand: Thoughts & Translations</h1>
-      <p class="text-md max-w-2xl text-left mx-auto mt-2 md:px-10 sm:px-10">A reflection on the speeches of one of
-        India's
-        greatest
-        storytellers
-        — presented bilingually with videos, translations, and more by Shubhra Prakash</p>
-    </div>
 
-  </header>
   <!-- <div class="flex justify-end gap-4 px-4 py-2 text-sm bg-yellow-100 dark:bg-gray-800">
     <button id="themeToggle"
       class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600">
@@ -103,10 +93,21 @@
   </div> -->
 
   <main class="max-w-6xl mx-auto px-4 pb-10 md:p-10 sm:p-10">
-    <section class="flex flex-col md:flex-row md:space-x-8 mb-6 items-center p-4">
+    <section class="flex flex-col md:flex-row md:space-x-8 mb-6 p-4">
 
       <!-- Video -->
       <div class="md:w-4/5 mb-6 md:mb-0">
+        <header class=" pb-8 bg-gray-900 w-full">
+          <div class="text-center">
+            <h1 class="text-3xl md:text-4xl font-semibold mb-2">Premchand: Thoughts & Translations</h1>
+            <p class="text-md max-w-2xl text-left mx-auto mt-2 md:px-10 sm:px-10">A reflection on the speeches of one of
+              India's
+              greatest
+              storytellers
+              — presented bilingually with videos, translations, and more by Shubhra Prakash</p>
+          </div>
+
+        </header>
         <video class="w-full" autoplay loop muted playsinline preload="auto" controls>
           <source src="vid/premchand.webm" type="video/webm" />
           <source src="vid/premchand.mp4" type="video/mp4" />
@@ -152,6 +153,13 @@
             class="flex items-center gap-3 p-1 bg-yellow-500 border border-brand-300   text-black  rounded-lg hover:bg-brand-200 hover:text-brand-800 transition text-md">
             <span class="text-xl">🗣️</span> Learn Hindi through stories
           </a>
+        </div>
+        <div class="w-full max-w-sm mx-auto mt-8">
+          <iframe width="290" height="300" src="https://www.youtube.com/embed/MgVJoSuMjak"
+            title="YouTube portrait video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </section>
