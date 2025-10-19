@@ -76,7 +76,7 @@
         <!-- Text content -->
 
 
-        <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-left md:max-w-sm">
+    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-left md:max-w-sm">
     <h2 class="text-2xl md:text-3xl font-bold mb-2 text-yellow-400">Ensemble Version (हिंदी)</h2>
     <p class="text-yellow-300 text-sm md:text-base">A rich collective storytelling with multiple voices and instruments. Touring India.</p>
     <a href="#hindi" class="mt-4 inline-block px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore हिंदी version </a>
@@ -84,47 +84,52 @@
     </section>
 
 </main>
+<section class="relative w-full bg-repeat bg-center bg-contain" 
+         style="background-image: url('images/fontwala/rotatedAngloNagari.jpg');">
 
-    <section id="about" class="p-12 bg-neutral-800 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">About</h3>
-        <p class="max-w-3xl">Statements</p>
-    </section>
+    <!-- Overlay to dim the background so text is readable -->
+    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
 
+    <!-- Inner content -->
+    <div class="relative z-10">
 
-    <!-- Placeholder sections -->
-    <section id="english" class="p-12 bg-neutral-900 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">🎭 English Solo</h3>
-        <p class="max-w-3xl">Include reviews, tour dates, video highlights, performer bios here...</p>
-    </section>
+        <section id="about" class="p-12 bg-neutral-800 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">About</h3>
+            <p class="max-w-3xl">Statements</p>
+        </section>
 
-    <section id="hindi" class="p-12 bg-neutral-800 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">🎭 Hindi Ensemble</h3>
-        <p class="max-w-3xl">Include rehearsal photos, cast list, language reflections, performance videos...</p>
-    </section>
+        <section id="english" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">🎭 English Solo</h3>
+            <p class="max-w-3xl">Include reviews, tour dates, video highlights, performer bios here...</p>
+        </section>
 
-    
-      <section id="artists" class="p-12 bg-neutral-900 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">Artists</h3>
-        <p class="max-w-3xl">Photos and Bios</p>
-    </section>
+        <section id="hindi" class="p-12 bg-neutral-800 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">🎭 Hindi Ensemble</h3>
+            <p class="max-w-3xl">Include rehearsal photos, cast list, language reflections, performance videos...</p>
+        </section>
 
-    
-    <section id="press" class="p-12 bg-neutral-800 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">Press</h3>
-        <p class="max-w-3xl">Screenshot of the press</p>
-    </section>
+        <section id="artists" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">Artists</h3>
+            <p class="max-w-3xl">Photos and Bios</p>
+        </section>
 
-    
-      <section id="contact" class="p-12 bg-neutral-900 text-yellow-300">
-        <h3 class="text-3xl font-bold mb-4">Contact / Booking</h3>
-        <p class="max-w-3xl">Contact / Booking</p>
-    </section>
+        <section id="press" class="p-12 bg-neutral-800 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">Press</h3>
+            <p class="max-w-3xl">Screenshot of the press</p>
+        </section>
+
+        <section id="contact" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
+            <h3 class="text-3xl font-bold mb-4">Contact / Booking</h3>
+            <p class="max-w-3xl">Contact / Booking</p>
+        </section>
+
+    </div>
 
     <!-- Footer -->
-    <footer class="text-center text-sm py-6 bg-black text-yellow-400">
+    <footer class="text-center text-sm py-6 bg-black text-yellow-400 relative z-10">
         © 2025 Fontwala. Designed for a dual world.
     </footer>
-
+</section>
     
     <!-- Full-screen overlay menu -->
 <div id="menuOverlay"
