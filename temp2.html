@@ -44,37 +44,55 @@
     </header>
 
     <!-- Split layout -->
-    <main class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
+   <main class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
 
-        <!-- English Solo -->
-        <section
-            class="bg-neutral-900 flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-yellow-400">
-                🇺🇸 Solo Version (English)
-            </h2>
-            <p class="max-w-md text-yellow-300">
-                A minimalist performance of voice and presence. Touring across the U.S.
-            </p>
-            <a href="#english"
-                class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">
-                Explore English
-            </a>
-        </section>
+    <!-- English Solo Slideshow -->
+    <section class="relative flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center overflow-hidden">
+        <!-- Slideshow images -->
+        <div class="absolute inset-0">
+            <img src="images/fontwala/play/solo-play.jpeg" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+            <img src="images/fontwala/play/manhattanville.png" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/update-rising-thumb-fontwala.png" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/web-sf-marsh.jpg" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/performance.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
 
-        <!-- Hindi Ensemble -->
-        <section class="bg-neutral-800 flex flex-col justify-center items-center p-8 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-yellow-300">
-                🇮🇳 Ensemble Version (Hindi)
-            </h2>
-            <p class="max-w-md text-yellow-200">
-                A rich collective storytelling with multiple voices and instruments. Touring India.
-            </p>
-            <a href="#hindi"
-                class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">
-                Explore Hindi
-            </a>
-        </section>
-    </main>
+        </div>
+
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <!-- Text content -->
+        <div class="relative z-10">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-400">🇺🇸 Solo Version (English)</h2>
+            <p class="max-w-md text-yellow-300">A minimalist performance of voice and presence. Touring across the U.S.</p>
+            <a href="#english" class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore English</a>
+        </div>
+    </section>
+
+    <!-- Hindi Ensemble Slideshow -->
+    <section class="relative flex flex-col justify-center items-center p-8 text-center overflow-hidden">
+        <!-- Slideshow images -->
+        <div class="absolute inset-0">
+            <img src="images/fontwala/play/ensemble8.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+            <img src="images/fontwala/play/ensemble00.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/ensemble01.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/ensemble1.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img src="images/fontwala/play/ensemble2.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        </div>
+
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-black/50"></div>
+
+        <!-- Text content -->
+        <div class="relative z-10">
+            <h2 class="text-2xl font-bold mb-4 text-yellow-300">🇮🇳 Ensemble Version (Hindi)</h2>
+            <p class="max-w-md text-yellow-200">A rich collective storytelling with multiple voices and instruments. Touring India.</p>
+            <a href="#hindi" class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore Hindi</a>
+        </div>
+    </section>
+
+</main>
+
 
     <!-- Placeholder sections -->
     <section id="english" class="p-12 bg-neutral-900 text-yellow-300">
@@ -166,6 +184,27 @@ closeMenu.addEventListener('click', () => {
             }, 400); // matches Tailwind's duration-500 (≈0.5s)
         });
     });
+
+    // Function to create slideshow for a section
+function initSlideshow(sectionSelector, interval = 5000) {
+    const section = document.querySelector(sectionSelector);
+    const images = Array.from(section.querySelectorAll('img'));
+    let current = 0;
+
+    setInterval(() => {
+        const next = (current + 1) % images.length;
+        images[current].classList.remove('opacity-100');
+        images[current].classList.add('opacity-0');
+        images[next].classList.remove('opacity-0');
+        images[next].classList.add('opacity-100');
+        current = next;
+    }, interval);
+}
+
+// Initialize slideshows
+initSlideshow('section:nth-child(1)'); // English
+initSlideshow('section:nth-child(2)'); // Hindi
+
 
     </script>
 
