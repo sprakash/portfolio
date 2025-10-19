@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Fontwala — A Tale in Two Languages (Black Dark Mode)</title>
+    <title>Fontwala — A Play with possibility in English and Hindi </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .h-screen-custom {
@@ -15,16 +15,10 @@
 
 <body class="bg-black text-yellow-300 transition-colors duration-500">
 
-    <!-- Dark mode toggle -->
-    <div class="fixed top-4 right-4 z-50">
-        <button id="darkToggle"
-            class="bg-yellow-400 text-black font-bold px-4 py-2 rounded shadow-md hover:bg-yellow-300 transition">
-            Toggle Dark/Light
-        </button>
-    </div>
+ 
 
     <!-- Hamburger menu button (top-left) -->
-<div class="fixed top-4 left-4 z-50">
+<div class="fixed top-4 left-4 z-50 m-5 bg-neutral-800 p-4 opacity-50 hover:opacity-100">
     <button id="menuToggle"
         class="flex flex-col justify-between w-8 h-6 group focus:outline-none">
         <span class="block h-1 bg-yellow-400 rounded group-hover:bg-yellow-300 transition"></span>
@@ -36,7 +30,7 @@
     <!-- Header -->
     <header class="text-center py-8 bg-black/90 shadow-md backdrop-blur-sm">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-yellow-400">
-            Fontwala: A Tale in Two Languages
+            Fontwala: A Play with possibility in English and Hindi
         </h1>
         <p class="mt-2 text-lg text-yellow-300">
             One story. Two Languages. Solo in English. Ensemble in Hindi.
@@ -46,28 +40,24 @@
     <!-- Split layout -->
    <main class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
 
-    <!-- English Solo Slideshow -->
-    <section class="relative flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center overflow-hidden">
-        <!-- Slideshow images -->
-        <div class="absolute inset-0">
-            <img src="images/fontwala/play/solo-play.jpeg" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
-            <img src="images/fontwala/play/manhattanville.png" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/update-rising-thumb-fontwala.png" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/web-sf-marsh.jpg" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/performance.JPG" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+  <section class="relative flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center overflow-hidden">
+    <!-- Slideshow images -->
+    <div class="absolute inset-0">
+        <img src="images/fontwala/play/solo-play.jpeg" class="w-full h-full object-contain absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+        <img src="images/fontwala/play/manhattanville.png" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img src="images/fontwala/play/update-rising-thumb-fontwala.png" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+    </div>
 
-        </div>
+    <!-- Overlay for the image -->
+    <div class="absolute inset-0 bg-black/30"></div>
 
-        <!-- Overlay for readability -->
-        <div class="absolute inset-0 bg-black/50"></div>
-
-        <!-- Text content -->
-        <div class="relative z-10">
-            <h2 class="text-2xl font-bold mb-4 text-yellow-400">🇺🇸 Solo Version (English)</h2>
-            <p class="max-w-md text-yellow-300">A minimalist performance of voice and presence. Touring across the U.S.</p>
-            <a href="#english" class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore English</a>
-        </div>
-    </section>
+ <!-- Text overlay on the side -->
+<div class="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-right md:max-w-sm">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2 text-yellow-400">Solo Version (English)</h2>
+    <p class="text-yellow-300 text-sm md:text-base">A minimalist performance of voice and presence. Touring across the U.S.</p>
+    <a href="#english" class="mt-4 inline-block px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore English version</a>
+</div>
+</section>
 
     <!-- Hindi Ensemble Slideshow -->
     <section class="relative flex flex-col justify-center items-center p-8 text-center overflow-hidden">
@@ -84,14 +74,21 @@
         <div class="absolute inset-0 bg-black/50"></div>
 
         <!-- Text content -->
-        <div class="relative z-10">
-            <h2 class="text-2xl font-bold mb-4 text-yellow-300">🇮🇳 Ensemble Version (Hindi)</h2>
-            <p class="max-w-md text-yellow-200">A rich collective storytelling with multiple voices and instruments. Touring India.</p>
-            <a href="#hindi" class="mt-6 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore Hindi</a>
-        </div>
+
+
+        <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-left md:max-w-sm">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2 text-yellow-400">Ensemble Version (हिंदी)</h2>
+    <p class="text-yellow-300 text-sm md:text-base">A rich collective storytelling with multiple voices and instruments. Touring India.</p>
+    <a href="#hindi" class="mt-4 inline-block px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore हिंदी version </a>
+</div>
     </section>
 
 </main>
+
+    <section id="about" class="p-12 bg-neutral-800 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">About</h3>
+        <p class="max-w-3xl">Statements</p>
+    </section>
 
 
     <!-- Placeholder sections -->
@@ -103,6 +100,24 @@
     <section id="hindi" class="p-12 bg-neutral-800 text-yellow-300">
         <h3 class="text-3xl font-bold mb-4">🎭 Hindi Ensemble</h3>
         <p class="max-w-3xl">Include rehearsal photos, cast list, language reflections, performance videos...</p>
+    </section>
+
+    
+      <section id="artists" class="p-12 bg-neutral-900 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">Artists</h3>
+        <p class="max-w-3xl">Photos and Bios</p>
+    </section>
+
+    
+    <section id="press" class="p-12 bg-neutral-800 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">Press</h3>
+        <p class="max-w-3xl">Screenshot of the press</p>
+    </section>
+
+    
+      <section id="contact" class="p-12 bg-neutral-900 text-yellow-300">
+        <h3 class="text-3xl font-bold mb-4">Contact / Booking</h3>
+        <p class="max-w-3xl">Contact / Booking</p>
     </section>
 
     <!-- Footer -->
@@ -130,25 +145,7 @@
 
 
     <script>
-        const toggleBtn = document.getElementById('darkToggle');
-        const htmlEl = document.documentElement;
-
-        // Simple toggle between black dark mode and light mode
-        toggleBtn.addEventListener('click', () => {
-            if (document.body.classList.contains('bg-black')) {
-                // Switch to light mode
-                document.body.classList.remove('bg-black', 'text-yellow-300');
-                document.body.classList.add('bg-white', 'text-gray-900');
-                toggleBtn.classList.remove('bg-yellow-400', 'text-black');
-                toggleBtn.classList.add('bg-indigo-600', 'text-white');
-            } else {
-                // Switch back to black dark mode
-                document.body.classList.remove('bg-white', 'text-gray-900');
-                document.body.classList.add('bg-black', 'text-yellow-300');
-                toggleBtn.classList.remove('bg-indigo-600', 'text-white');
-                toggleBtn.classList.add('bg-yellow-400', 'text-black');
-            }
-        });
+  
 
         // === Full-screen menu toggle ===
 const menuToggle = document.getElementById('menuToggle');
