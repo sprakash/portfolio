@@ -23,13 +23,23 @@
         </button>
     </div>
 
+    <!-- Hamburger menu button (top-left) -->
+<div class="fixed top-4 left-4 z-50">
+    <button id="menuToggle"
+        class="flex flex-col justify-between w-8 h-6 group focus:outline-none">
+        <span class="block h-1 bg-yellow-400 rounded group-hover:bg-yellow-300 transition"></span>
+        <span class="block h-1 bg-yellow-400 rounded group-hover:bg-yellow-300 transition"></span>
+        <span class="block h-1 bg-yellow-400 rounded group-hover:bg-yellow-300 transition"></span>
+    </button>
+</div>
+
     <!-- Header -->
     <header class="text-center py-8 bg-black/90 shadow-md backdrop-blur-sm">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-yellow-400">
             Fontwala: A Tale in Two Languages
         </h1>
         <p class="mt-2 text-lg text-yellow-300">
-            One story. Two tongues. Solo in English. Ensemble in Hindi.
+            One story. Two Languages. Solo in English. Ensemble in Hindi.
         </p>
     </header>
 
@@ -82,6 +92,25 @@
         © 2025 Fontwala. Designed for a dual world.
     </footer>
 
+    
+    <!-- Full-screen overlay menu -->
+<div id="menuOverlay"
+    class="fixed inset-0 bg-black/95 flex flex-col items-center justify-center text-center space-y-8
+           text-yellow-300 text-3xl font-semibold opacity-0 pointer-events-none transition-all duration-500 z-40">
+    <a href="#home" class="hover:text-yellow-100 transition">Home</a>
+    <a href="#about" class="hover:text-yellow-100 transition">About</a>
+    <a href="#english" class="hover:text-yellow-100 transition">English Solo</a>
+    <a href="#hindi" class="hover:text-yellow-100 transition">Hindi Ensemble</a>
+    <a href="#artists" class="hover:text-yellow-100 transition">Artists</a>
+    <a href="#press" class="hover:text-yellow-100 transition">Press</a>
+    <a href="#contact" class="hover:text-yellow-100 transition">Contact / Booking</a>
+    <button id="closeMenu" class="mt-12 text-sm px-4 py-2 border border-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition">
+         ✕
+    </button>
+</div>
+
+
+
     <script>
         const toggleBtn = document.getElementById('darkToggle');
         const htmlEl = document.documentElement;
@@ -102,6 +131,42 @@
                 toggleBtn.classList.add('bg-yellow-400', 'text-black');
             }
         });
+
+        // === Full-screen menu toggle ===
+const menuToggle = document.getElementById('menuToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+const closeMenu = document.getElementById('closeMenu');
+
+menuToggle.addEventListener('click', () => {
+    menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+    menuOverlay.classList.add('opacity-100');
+});
+
+closeMenu.addEventListener('click', () => {
+    menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+    menuOverlay.classList.remove('opacity-100');
+});
+
+ // 🟡 NEW: Close the overlay *before* navigating to anchors
+    const menuLinks = menuOverlay.querySelectorAll('a[href^="#"]');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault(); // stop instant jump
+            const target = link.getAttribute('href');
+
+            // fade out overlay
+            menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+            menuOverlay.classList.remove('opacity-100');
+
+            // after transition ends, navigate
+            setTimeout(() => {
+                if (target && target !== '#') {
+                    window.location.hash = target;
+                }
+            }, 400); // matches Tailwind's duration-500 (≈0.5s)
+        });
+    });
+
     </script>
 
 </body>
