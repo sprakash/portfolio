@@ -12,12 +12,96 @@
         }
 
         #videoModal {
-  transition: opacity 0.3s ease;
-}
-#videoModal.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+            transition: opacity 0.3s ease;
+        }
+        #videoModal.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+
+    @layer utilities {
+    @keyframes slide-right {
+        0% { transform: translateX(-20px); opacity: 0; }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+
+    .animate-slide-right {
+        animation: slide-right 0.5s ease-out both;
+    }
+    }
+
+    .square-box {
+        aspect-ratio: 1 / 1;
+    }
+
+    /* slideshow images stack and crossfade */
+    .mini-slideshow { position: relative; }
+    .mini-slideshow .slideshow-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+    }
+
+    .mini-slideshow .slideshow-img.active {
+        opacity: 1;
+    }
+
+   .slideshow-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .slideshow-img.active {
+        opacity: 1;
+    }
+
+    /* # of images = 7 → 100% / 7 = ~14.28% each */
+    .slideshow-img:nth-child(1) { animation-delay: 0s; }
+    .slideshow-img:nth-child(2) { animation-delay: 3s; }
+    .slideshow-img:nth-child(3) { animation-delay: 6s; }
+    .slideshow-img:nth-child(4) { animation-delay: 9s; }
+    .slideshow-img:nth-child(5) { animation-delay: 12s; }
+    .slideshow-img:nth-child(6) { animation-delay: 15s; }
+    .slideshow-img:nth-child(7) { animation-delay: 18s; }
+
+    @keyframes fadeSlideshow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }   /* fade in */
+    30% { opacity: 1; }   /* hold */
+    40% { opacity: 0; }   /* fade out */
+    100% { opacity: 0; }
+    }
+
+    .mini-slideshow img:nth-child(1) {
+        animation: fade 6s infinite;
+    }
+    .mini-slideshow img:nth-child(2) {
+        animation: fade2 6s infinite;
+    }
+
+
+    @keyframes fade {
+        0%, 45% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+    }
+    @keyframes fade2 {
+        0%, 45% { opacity: 0; }
+        50%, 100% { opacity: 1; }
+    }
+
+
+
     </style>
 </head>
 
@@ -37,8 +121,9 @@
 
     <!-- Header -->
     <header class="text-center py-8 bg-black/90 shadow-md backdrop-blur-sm">
-        <h1 class="text-xl md:text-3xl font-extrabold tracking-tight text-yellow-400 flex justify-center items-center">
-        <img src="images/fontwala/fontwala-title.png" class="w-1/5"/> <div class="text-left font-semibold text-2xl">— on the arrival of Indian letters on the English keyboard. <p class="text-md font-semibold">One story, many languages become a play, a digital exhibition and a documentary</p></div>
+        <h1 class="text-xl md:text-3xl font-extrabold tracking-tight text-yellow-400 flex flex-col justify-center items-center">
+        <img src="images/fontwala/fontwala-title.png" class="w-2/5 text-center"/> 
+        <div class="text-center font-semibold text-2xl">— story of Indian letters surviving on the English keyboard. <p class="text-md font-semibold">a play, a digital exhibition and a documentary</p></div>
         </h1>
       
     </header>
@@ -99,8 +184,7 @@
     </section>
 
 </main>
-<section class="relative w-full bg-repeat bg-center bg-contain" 
-         style="background-image: url('images/fontwala/rotatedAngloNagari.jpg');">
+<section class="relative w-full bg-repeat bg-center bg-contain">
 
     <!-- Overlay to dim the background so text is readable -->
     <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
@@ -109,10 +193,14 @@
     <div class="relative z-10">
 
          <!-- Audience Review Video (Fontwala) -->
-                <div class="flex justify-center my-8 py-10">
+            <h3 class="text-4xl md:text-5xl font-extrabold mt-4 text-yellow-400 text-center">Reviews</h3>
+
+                <div class="flex justify-center my-8 pb-10">
+
                       
   <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
       onclick="openVideo('piw-ni41qmY', 0)">
+
       <img src="images/fontwala/review.png" class="w-full h-full object-contain"
           alt="Audience Reviews Thumbnail">
       <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
@@ -141,98 +229,539 @@
     <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
 
     <!-- Content -->
-    <div class="relative z-10 max-w-5xl mx-auto space-y-6">
+    <div class="relative z-10 max-w-5xl mx-auto space-y-12">
 
-        <h3 class="text-4xl md:text-5xl font-extrabold mb-4 text-yellow-400">About FONTWALA</h3>
+    <!-- Title -->
+    <h3 class="text-4xl md:text-5xl font-extrabold text-yellow-400 tracking-tight">
+        About FONTWALA
+    </h3>
 
-        <p class="text-lg md:text-xl leading-relaxed">
-            <span class="font-bold text-yellow-300">FONTWALA</span> is a hybrid, evolving theatre-project: a one-woman English-language solo play, a Hindi-language ensemble production, a digital exhibition, and a forthcoming documentary—built around the life and work of script-visionary <span class="italic text-yellow-400">Rajeev Prakash Khare</span> (aka “Fontwala”).
+    <!-- Top: typoface image + intro text -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Image -->
+        <img src="images/rajeev-typoface.jpg" loading="lazy"
+             class="w-full max-w-md mx-auto rounded-xl shadow-lg object-contain 
+                    hover:scale-105 transition-transform duration-300">
+
+        <!-- Text -->
+        <p class="text-lg md:text-xl leading-relaxed text-yellow-300">
+            <span class="font-bold text-yellow-300">FONTWALA</span> is an evolving hybrid theatre-project: 
+            a one-woman English-language solo play, a Hindi-language ensemble production, 
+            a digital exhibition, and a forthcoming documentary—built around the life and work 
+            of script-visionary 
+            <span class="italic text-yellow-400">Rajeev Prakash Khare</span> 
+            (aka “Fontwala”).
         </p>
 
-        <!-- Single image -->
-             class="w-full md:w-3/4 lg:w-1/2 h-auto mx-auto my-6 rounded-lg shadow-lg object-contain">
+    </div>
 
-        <p class="text-base md:text-lg leading-relaxed border-l-4 border-yellow-400 pl-4">
-            Beginning in 2017 when theatre-maker and designer Shubhra Prakash interviewed her uncle Rajeev, the story expands far beyond biography:
-        </p>
+    <!-- Highlight quote -->
+    <p class="text-base md:text-lg leading-relaxed border-l-4 border-yellow-400 pl-4 italic text-yellow-200">
+        In 2017, theatre-maker Shubhra returned to India after twenty years in the US to interview her uncle — 
+        a designer who created one of the first Hindi typing keyboards. Several questions arose:
+    </p>
 
-        <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
-            <li>What happens when the artisan becomes entrepreneur?</li>
-            <li>What is lost—and what remains—of a script and language when it is digitised?</li>
-            <li>What does it mean to return home after decades in another world?</li>
-        </ul>
+    <!-- Bottom: image on right + list on left -->
+<div class="flex flex-col items-center space-y-6">
 
-        <p class="text-lg md:text-xl leading-relaxed mt-4">
-            Two Versions. One Mission.
-        </p>
+    <!-- List -->
+    <ul class="list-none space-y-3 text-sm md:text-base text-center">
+        <li class="relative inline-block whitespace-nowrap px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right">
+            What happens when an artist turns into an entrepreneur?
+        </li>
 
-        <!-- Two-column image grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-            <img src="images/rajeev-typoface.jpg" loading="lazy" class="w-full h-auto rounded-lg shadow-lg object-contain hover:scale-105 transition-transform duration-300">
-            <img src="images/fontwala/anglonagarikeyboard.jpg" loading="lazy" class="w-full h-auto rounded-lg shadow-lg object-contain hover:scale-105 transition-transform duration-300">
+        <li class="relative inline-block whitespace-nowrap px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right">
+            What is lost of a script and language when digitised?
+        </li>
+
+        <li class="relative inline-block whitespace-nowrap px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right">
+            How is it to return to one's mother tongue after decades of living with another language?
+        </li>
+    </ul>
+
+    <!-- Image -->
+    <img src="images/fontwala/anglonagarikeyboard.jpg" loading="lazy"
+         class="w-full max-w-md mx-auto shadow-lg object-contain
+                hover:scale-105 transition-transform duration-300">
+</div>
+</div>
+  
+<!-- SECTION: Two Versions (Yellow Cards) -->
+<div class="mt-16 space-y-10 max-w-6xl mx-auto px-4 relative z-20">
+
+    <h3 class="text-2xl md:text-3xl font-extrabold text-yellow-400 tracking-tight relative z-20">
+     Two Versions. One Mission.
+    </h3>
+
+
+    <!-- Yellow Cards Grid -->
+    <div class="grid md:grid-cols-2 gap-8 relative z-30">
+
+        <!-- Card 1 -->
+        <div class="bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <h4 class="text-2xl font-bold text-black mb-3">English Solo Play</h4>
+            <p class="text-black text-sm md:text-base leading-relaxed">
+                A global, intimate journey—written and performed by Shubhra, directed by Marcus Yi—
+                this version travels to festivals and theatres in the U.S. and India, engaging audiences
+                who speak English and explore universal questions of language, migration, and craft.
+            </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 mt-6">
-            <div class="bg-black/60 p-4 rounded-lg border border-yellow-400">
-                <h4 class="text-xl font-bold text-yellow-400 mb-2">English Solo Play</h4>
-                <p class="text-yellow-300 text-sm md:text-base">
-                    A global, intimate journey—written and performed by Shubhra, directed by Marcus Yi—this version travels to festivals and theatres in the U.S. and India, engaging audiences who speak English and explore universal questions of language, migration, and craft.
-                </p>
-            </div>
-            <div class="bg-black/60 p-4 rounded-lg border border-yellow-400">
-                <h4 class="text-xl font-bold text-yellow-400 mb-2">Hindi Ensemble Play</h4>
-                <p class="text-yellow-300 text-sm md:text-base">
-                    Fully realised in Hindi (with elements of Bhojpuri, Bundelkhandi, and Marathi), this production dramatizes the community, dialects, and vernacular world that shaped Rajeev’s career, inviting Indian audiences into rich textures of story through collaboration and ensemble energy.
-                </p>
-            </div>
+        <!-- Card 2 -->
+        <div class="bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+            <h4 class="text-2xl font-bold text-black mb-3">Hindi Ensemble Play</h4>
+            <p class="text-black text-sm md:text-base leading-relaxed">
+                Fully realised in Hindi (with elements of Bhojpuri, Bundelkhandi, and Marathi),
+                this production dramatizes the community, dialects, and vernacular world that shaped
+                Rajeev’s career—inviting Indian audiences into rich textures of story through collaboration and ensemble energy.
+            </p>
         </div>
 
-        <p class="text-base md:text-lg mt-6">
-            We are actively seeking partners: theatres, cultural centres, festivals, designers, calligraphers, typographers, digital storytellers, and collaborators for site-specific or multilingual adaptations.
-        </p>
+    </div>
 
-        <a href="#contact" class="inline-block mt-4 px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Reach Out</a>
+    <p class="text-lg md:text-xl text-yellow-400 max-w-3xl mx-auto text-center mt-6">
+        We are actively seeking partners: theatres, cultural centres, festivals, designers, calligraphers, typographers,
+        digital storytellers, and collaborators for site-specific or multilingual adaptations.
+    </p>
+
+    <div class="text-center">
+        <a href="#contact"
+           class="inline-block mt-4 px-8 py-3 rounded-full bg-black text-yellow-400 font-semibold
+                  hover:bg-neutral-900 transition tracking-wide">
+            Reach Out
+        </a>
+    </div>
+</div>
+
+
+<!-- SECTION TEMPLATE (Yellow Cards Style) -->
+<section id="english" class="mt-20 p-12">
+
+<h3 class="text-3xl font-extrabold text-yellow-400 mb-2 text-center relative z-20">
+        🎭 English Solo
+    </h3>
+
+  <!-- Horizontal scroll container -->
+
+  <section id="english-timeline" class="mt-12 p-6 bg-neutral-900 text-yellow-300">
+  <h3 class="text-3xl font-extrabold text-yellow-400  text-center">
+    Performance Timeline
+  </h3>
+
+  
+<!-- Masonry Performance Timeline -->
+<div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 p-4">
+
+  <!-- ITEM TEMPLATE (repeat for each item) -->
+  <!-- Each item must be block-level & margin-bottom so masonry can flow -->
+
+  <!-- 2024 – Sept 25 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/sfcbfb.png" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, Sept 25</h4>
+      <p class="text-yellow-400 text-sm">San Francisco Center For The Book</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2024 – Sept 12 (multi-image slideshow area, but masonry uses first image) -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/manhattanville1.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, Sept 12</h4>
+      <p class="text-yellow-400 text-sm">Manhattanville College NY</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2024 – Aug 3,4,9 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/marsh-aug.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, Aug 3, 4 & 9</h4>
+      <p class="text-yellow-400 text-sm">TheMarsh In Front Of Your Eyes Festival SF</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2024 – March 29 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/sabha-1.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, March 29</h4>
+      <p class="text-yellow-400 text-sm">Columbia University (Sabha)</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2024 – Feb 6 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/unspoken.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, Feb 6</h4>
+      <p class="text-yellow-400 text-sm">Untold Mother Tongue Festival Columbia NY</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2024 – Jan 31 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/rising-fontwala-sf.png" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2024, Jan 31</h4>
+      <p class="text-yellow-400 text-sm">TheMarsh Rising SF</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – Oct 20 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/consulate-1.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, Oct 20</h4>
+      <p class="text-yellow-400 text-sm">Indian Consulate New York</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – Sept 22 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/queensclass.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, Sept 22</h4>
+      <p class="text-yellow-400 text-sm">Queens College Writing Class</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – Aug 26 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/brooklynlib-1.png" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, Aug 26</h4>
+      <p class="text-yellow-400 text-sm">Brooklyn Library</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – July 28–30 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/theatrelab-2023-1.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, July 28–30</h4>
+      <p class="text-yellow-400 text-sm">Theatrelab Run NY</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – July 25 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/cba-2.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, July 25</h4>
+      <p class="text-yellow-400 text-sm">Center of Book Arts Book Talk</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – March 31 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/mar2023-americanCenter.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, Mar 31</h4>
+      <p class="text-yellow-400 text-sm">American Center, New Delhi</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2023 – Jan 13 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/apj.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2023, Jan 13</h4>
+      <p class="text-yellow-400 text-sm">Apeejay Kolkata Literary Festival</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2022 – Oct 17–22 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/fontwala-poster.png" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2022, Oct 17–22</h4>
+      <p class="text-yellow-400 text-sm">Bowery Poetry NY Run</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+  <!-- 2022 – Mar 25 -->
+  <div class="break-inside-avoid mb-4 relative group rounded-xl overflow-hidden shadow-md bg-black">
+    <img src="images/fontwala/play/mar2022-theMarsh.jpg" class="w-full h-auto object-cover" />
+    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4">
+      <h4 class="text-yellow-400 font-bold text-lg">2022, Mar 25</h4>
+      <p class="text-yellow-400 text-sm">Virtual TheMarsh International Solo Festival</p>
+      <button class="mt-2 bg-yellow-400 text-black text-sm px-3 py-1 rounded">Learn More</button>
+    </div>
+  </div>
+
+</div>
+
+
+
+  <div class="flex overflow-x-auto space-x-4 py-4 px-2 snap-x snap-mandatory">
+
+    <!-- 2024 Shows -->
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2024, Sept 25</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">San Francisco Center For The Book</p>
+      <img src="images/fontwala/play/sfcbfb.png"/>
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[230px] rounded-xl shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+
+        <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2024, Sept 12</h4>
+        <p class="text-black text-sm leading-snug mb-2 text-yellow-400">Manhattanville College NY</p>
+
+        <div class="relative w-full h-40 overflow-hidden">
+            <img src="images/fontwala/play/manhattanville1.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville2.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville3.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville4.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville5.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville6.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/manhattanville7.jpg" class="slideshow-img">
+        </div>
+
+    </div>
+
+
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2024, Aug 3, 4 & 9</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">TheMarsh In Front Of Your Eyes Festival SF</p>
+        <div class="relative w-full aspect-square overflow-hidden  mini-slideshow">
+            <img src="images/fontwala/play/marsh-aug.jpg" alt="TheMarsh In Front Of Your Eyes Festival SF" class="slideshow-img"/>
+            <img src="images/fontwala/play/web-sf-marsh.jpg" alt="TheMarsh In Front Of Your Eyes Festival SF" class="slideshow-img"/>
+        </div>
+    </div>
+
+
+   <div class="flex-shrink-0 w-64 min-h-[230px] rounded-xl shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+
+    <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2024, March 29</h4>
+    <p class="text-black text-sm leading-snug mb-2 text-yellow-400">
+        Columbia University, (Sabha)
+    </p>
+
+        <div class="relative w-full aspect-square overflow-hidden rounded-lg mini-slideshow">
+            <img src="images/fontwala/play/sabha-1.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/sabha-2.jpg" class="slideshow-img">
+        </div>
+
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400"></h4>2024, Feb 6</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">Untold Mother Tongue Festival Columbia NY</p>
+      <img src="images/fontwala/play/unspoken.jpg" alt="Untold Mother Tongue Festival Columbia NY">
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2024, Jan 31</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">TheMarsh Rising SF</p>
+      <img src="images/fontwala/play/rising-fontwala-sf.png"/>
+    </div>
+
+    <!-- 2023 Shows -->
+    <div class="flex-shrink-0 w-64 min-h-[230px] rounded-xl shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+
+    <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, Oct 20</h4>
+    <p class="text-black text-sm leading-snug mb-2 text-yellow-400">
+        Indian Consulate New York
+    </p>
+
+        <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
+            <img src="images/fontwala/play/consulate-1.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/consulate-2.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/consulate-3.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/consulate-4.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/consulate-5.jpg" class="slideshow-img">
+            <img src="images/fontwala/play/consulate-6.jpg" class="slideshow-img">
+        </div>
+    </div>
+
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, Sept 22</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">Queens College Writing class with Immigrant students</p>
+      <img src="images/fontwala/play/queensclass.jpg"/>
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[230px] rounded-xl shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+
+    <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, Aug 26</h4>
+          <p class="text-black text-sm leading-snug text-yellow-400">Brooklyn Library, Fontwala: A Solo Play on Tech, Language, and Migration</p>
+        <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
+            <img src="images/fontwala/play/brooklynlib-1.png"  class="slideshow-img object-cover object-[100%_50%]" >
+            <img src="images/fontwala/play/brooklynlib.jpg"   class="slideshow-img object-contain bg-white ">
+        </div>
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[230px] shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+    
+    <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, July 28 - 30</h4>
+    <p class="text-black text-sm leading-snug text-yellow-400">Theatrelab Run NY</p>
+
+    <div class="relative w-full h-[130px] overflow-hidden bg-black mini-slideshow">
+        <img src="images/fontwala/play/theatrelab-2023-1.jpg"
+             class="slideshow-img w-full h-full object-contain object-[100%_100%]">
+        <img src="images/fontwala/play/theaterlab-2023-2.png"
+             class="slideshow-img w-full h-full object-contain object-[100%_100%]">
+    </div>
+
+</div>
+
+    <div class="flex-shrink-0 w-64 min-h-[230px] rounded-xl shadow-md p-2 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1 relative">
+
+    <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, July 25</h4>
+          <p class="text-black text-sm leading-snug text-yellow-400">Center of Book Arts, Fontwala Book Talk</p>
+        <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
+            <img src="images/fontwala/play/cba-2.jpg"  class="slideshow-img object-cover object-[100%_50%]" >
+            <img src="images/fontwala/play/cba-1.jpg"   class="slideshow-img object-contain bg-white ">
+        </div>
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, Mar 31</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">American Center, New Delhi, India</p>
+        <div class="relative w-full h-[130px] overflow-hidden bg-black mini-slideshow">
+            <img src="images/fontwala/play/mar2023-americanCenter.jpg" class="slideshow-img w-full h-full object-contain object-[100%_100%]"/>
+            <img src="images/fontwala/play/performance.JPG" class="slideshow-img" />
+        </div>
+
+    </div>
+
+    <div class="flex-shrink-0 w-64 min-h-[180px]  shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2023, Jan 13</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">Apeejay Kolkata Literary Festival, Kolkata, India</p>
+        <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
+                <img src="images/fontwala/play/apj.jpg" class="slideshow-img">
+                <img src="images/fontwala/play/jan2023-aklf.jpg" class="slideshow-img">    
+        </div>
+    </div>
+
+    <!-- 2022 Shows -->
+
+    <div class="flex-shrink-0 w-64 min-h-[180px]  shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2022, Oct 17 - 22</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">Bowery Poetry NY Run</p>
+        <img src="images/fontwala/play/fontwala-poster.png"/>
+    </div>
+
+
+    <div class="flex-shrink-0 w-64 min-h-[180px] rounded-xl shadow-md p-4 snap-start hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <h4 class="font-bold text-black text-lg mb-2 text-yellow-400">2022, Mar 25</h4>
+      <p class="text-black text-sm leading-snug text-yellow-400">Virtual TheMarsh International Solo Festival Online</p>
+      <img src="images/fontwala/play/mar2022-theMarsh.jpg" />
+    </div>
+
+  </div>
+
+  <!-- Scroll hint -->
+  <p class="mt-2 text-sm text-yellow-200 text-center">Scroll horizontally to see all shows →</p>
+</section>
+
+
+  
+</section>
+
+
+
+
+<section id="hindi"
+         class="p-12 bg-neutral-800">
+
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+        🎭 Hindi Ensemble
+    </h3>
+
+    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <p class="text-black leading-relaxed">
+            Include rehearsal photos, cast list, language reflections, performance videos...
+        </p>
     </div>
 </section>
 
 
-        <section id="english" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">🎭 English Solo</h3>
-            <p class="max-w-3xl">Include reviews, tour dates, video highlights, performer bios here...</p>
-        </section>
+<section id="exhibition"
+         class="p-12 bg-neutral-900">
 
-        <section id="hindi" class="p-12 bg-neutral-800 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">🎭 Hindi Ensemble</h3>
-            <p class="max-w-3xl">Include rehearsal photos, cast list, language reflections, performance videos...</p>
-        </section>
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+        Digital Exhibition
+    </h3>
 
-        <section id="exhibition" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">Digital Exhibition</h3>
-            <p class="max-w-3xl">Photos and Bios</p>
-        </section>
-
-        <section id="artists" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">Artists</h3>
-            <p class="max-w-3xl">Photos and Bios</p>
-        </section>
-
-        <section id="press" class="p-12 bg-neutral-800 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">Press</h3>
-            <p class="max-w-3xl">Screenshot of the press</p>
-        </section>
-
-        <section id="contact" class="p-12 bg-neutral-900 bg-opacity-90 text-yellow-300">
-            <h3 class="text-3xl font-bold mb-4">Contact / Booking</h3>
-            <p class="max-w-3xl">Contact / Booking</p>
-        </section>
-
+    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <p class="text-black leading-relaxed">Photos and Bios</p>
     </div>
-
-    <!-- Footer -->
-    <footer class="text-center text-sm py-6 bg-black text-yellow-400 relative z-10">
-        © 2025 Fontwala. Designed for a dual world.
-    </footer>
 </section>
+
+
+<section id="artists"
+         class="p-12 bg-neutral-800">
+
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+        Artists
+    </h3>
+
+    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <p class="text-black leading-relaxed">Photos and Bios</p>
+    </div>
+</section>
+
+
+<section id="press"
+         class="p-12 bg-neutral-900">
+
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+        Press
+    </h3>
+
+    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <p class="text-black leading-relaxed">Screenshot of the press</p>
+    </div>
+</section>
+
+
+<section id="contact"
+         class="p-12 bg-neutral-800">
+
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+        Contact / Booking
+    </h3>
+
+    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+        <p class="text-black leading-relaxed">Contact / Booking</p>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="text-center text-sm py-6 bg-black text-yellow-400 mt-16">
+    © 2025 Fontwala. Designed for a dual world.
+</footer>
+
+
     
     <!-- Full-screen overlay menu -->
 <div id="menuOverlay"
@@ -254,7 +783,59 @@
 
 
     <script>
+
+document.querySelectorAll(".slideshow").forEach(slide => {
+  const images = slide.querySelectorAll(".slideshow-img");
+  let index = 0;
+
+  setInterval(() => {
+    images[index].style.opacity = 0;
+    index = (index + 1) % images.length;
+    images[index].style.opacity = 1;
+  }, 2500);
+});
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+  // configure per-slideshow interval (ms)
+  const SLIDE_INTERVAL = 3000;
+
+  document.querySelectorAll('.mini-slideshow').forEach(slideshow => {
+    const slides = Array.from(slideshow.querySelectorAll('.slideshow-img'));
+    if (!slides.length) return;
+
+    let idx = 0;
+    slides.forEach((s, i) => { if (i === 0) s.classList.add('active'); else s.classList.remove('active'); });
+
+    let timer = setInterval(next, SLIDE_INTERVAL);
+
+    function next() {
+      slides[idx].classList.remove('active');
+      idx = (idx + 1) % slides.length;
+      slides[idx].classList.add('active');
+    }
+
+    // pause on hover
+    slideshow.addEventListener('mouseenter', () => clearInterval(timer));
+    slideshow.addEventListener('mouseleave', () => {
+      clearInterval(timer);
+      timer = setInterval(next, SLIDE_INTERVAL);
+    });
+  });
+});    
   
+  document.addEventListener("DOMContentLoaded", () => {
+  const slideshows = document.querySelectorAll(".slideshow-img");
+
+  let index = 0;
+  slideshows[index].classList.add("active");
+
+  setInterval(() => {
+    slideshows[index].classList.remove("active");
+    index = (index + 1) % slideshows.length;
+    slideshows[index].classList.add("active");
+  }, 2000); // change every 2s
+});
 
         // === Full-screen menu toggle ===
 const menuToggle = document.getElementById('menuToggle');
