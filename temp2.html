@@ -100,6 +100,119 @@
         50%, 100% { opacity: 1; }
     }
 
+    /* PRESS SECTION */
+.press-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.press-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.press-intro {
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Masonry */
+.press-masonry {
+    column-count: 1;
+    column-gap: 20px;
+}
+
+@media (min-width: 600px) {
+    .press-masonry {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 900px) {
+    .press-masonry {
+        column-count: 3;
+    }
+}
+
+.press-item {
+    display: block;
+    break-inside: avoid;
+    background: #fff;
+    margin: 0 0 20px;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.press-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.press-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.press-tag {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.press-item p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Video Section */
+.press-video-block {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.press-video-block h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fallback-link {
+    font-size: 0.9rem;
+    text-decoration: underline;
+    color: #333;
+    display: inline-block;
+    margin-top: 8px;
+}
+
 
 
     </style>
@@ -201,28 +314,26 @@
   <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
       onclick="openVideo('piw-ni41qmY', 0)">
 
-      <img src="images/fontwala/review.png" class="w-full h-full object-contain"
-          alt="Audience Reviews Thumbnail">
-      <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
-          <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="16,12 16,52 48,32" />
-          </svg>
+       <img src="images/fontwala/review.png" class="w-full h-full object-contain"
+              alt="Audience Reviews Thumbnail">
+          <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
+              <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
+                  <polygon points="16,12 16,52 48,32" />
+              </svg>
+          </div>
       </div>
-  </div>
-</div>
-
-
-                <div id="videoModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
-                <div class="relative w-full max-w-3xl">
-                    <button onclick="closeVideo()"
-                        class="absolute top-2 right-2 text-yellow-300 text-3xl z-50">✖</button>
-                    <div class="aspect-video">
-                        <iframe id="modalIframe" class="w-full h-full" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+    </div>
+    <div id="videoModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+                    <div class="relative w-full max-w-3xl">
+                        <button onclick="closeVideo()"
+                            class="absolute top-2 right-2 text-yellow-300 text-3xl z-50">✖</button>
+                        <div class="aspect-video">
+                            <iframe id="modalIframe" class="w-full h-full" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-            </div>
+      </div>
 <section id="about" class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
     <!-- Background & Overlay -->
     <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
@@ -369,7 +480,7 @@
 
         <!-- Desktop overlay -->
         <div class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg pointer-events-none group-hover:pointer-events-auto">
-            <span class="text-black font-bold text-lg">More info</span>
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </div>
 
         <!-- Mobile-friendly links/icons -->
@@ -400,8 +511,8 @@
         </div>
 
          <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="#"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -413,8 +524,8 @@
           <img src="images/fontwala/play/web-sf-marsh.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://themarsh.org/shows_and_events/marshstream/festival-shubhra-prakash/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -426,8 +537,8 @@
           <img src="images/fontwala/play/sabha-2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://engage.tc.columbia.edu/events/79796"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -436,8 +547,8 @@
         <p class="text-yellow-400 text-sm leading-snug">Untold Mother Tongue Festival Columbia NY</p>
         <img src="images/fontwala/play/unspoken.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://photos.google.com/share/AF1QipOq4Vse7eTFucuTwvNA2iULaLHbnehHai4F9ilB5vYNv25-HKd_dI4rmjuE389W4Q?key=Y25sR19sY0pNdk1nZzdxdElMRkpNellsenFyUGFB"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -446,8 +557,8 @@
         <p class="text-yellow-400 text-sm leading-snug">TheMarsh Rising SF</p>
         <img src="images/fontwala/play/rising-fontwala-sf.png" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://themarsh.org/shows_and_events/marshstream/marsh-risings-shubhra-prakash/"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -464,8 +575,8 @@
           <img src="images/fontwala/play/consulate-6.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://docs.google.com/document/d/11Dn0sLSTRxhcO3ARMctWMXvDCBLrQp2KHUxXqIVnlNM/edit?usp=sharing"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -474,9 +585,9 @@
         <p class="text-yellow-400 text-sm leading-snug">Queens College Writing class with Immigrant students</p>
         <img src="images/fontwala/play/queensclass.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
-        </a>
+        <div class="absolute inset-0 bg-yellow-400 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg p-4">An excerpt of Fontwala performed for immigrant students taking a writing class at Queens College.</span>
+        </div>
       </div>
 
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-2 bg-black relative group">
@@ -487,8 +598,8 @@
           <img src="images/fontwala/play/brooklynlib.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://www.bklynlibrary.org/calendar/fontwala-solo-play-tech-central-library-business-20230826"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -500,8 +611,8 @@
           <img src="images/fontwala/play/theaterlab-2023-2.png" class="slideshow-img w-full h-full object-contain opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://theaterlabnyc.com/fontwala-july-28-30-2023/"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -513,8 +624,8 @@
           <img src="images/fontwala/play/cba-1.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://centerforbookarts.org/product/calendar/book-talk/booktalk-shubhra-pakrash"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -526,9 +637,12 @@
           <img src="images/fontwala/play/performance.JPG" class="slideshow-img w-full h-full object-contain opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
-        </a>
+          <a href="https://www.facebook.com/events/606784607969902/?ref=newsfeed"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+              <span class="text-black font-bold text-lg">Click for More Info</span>
+          </a>
+          <a href="https://photos.google.com/share/AF1QipPIL5fYQ_WNqn3EVNNERptF1X6LvBdHE9ZDbGSlazVewonTFqLL81duyfOzT_UZgw?key=NnI5RXh6SjlnRXN1UzJYN1NaQ3VKYndsaEpuS2FB"  target="_blank" class="relative top-[-60px] inset-0 bg-yellow-400 bg-opacity-90 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+              <span class="text-black font-bold text-lg">Media</span>
+          </a>
       </div>
 
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group">
@@ -539,8 +653,8 @@
           <img src="images/fontwala/play/jan2023-aklf.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="images/fontwala/play/apjarticle1.jpg"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -553,8 +667,8 @@
                 <img src="images/fontwala/play/solo-play.jpeg" class="slideshow-img w-full h-auto object-cover rounded-lg mt-2">
             </div>
         <!-- Overlay -->
-        <a href="#" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
-            <span class="text-black font-bold text-lg">More info</span>
+        <a href="https://www.youtube.com/watch?v=6_LXUCLVUDQ" target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
+            <span class="text-black font-bold text-lg">Click for More Info</span>
         </a>
       </div>
 
@@ -564,9 +678,9 @@
         <img src="images/fontwala/play/mar2022-theMarsh.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
 
         <!-- Overlay -->
-        <a href="#"
+        <a href="https://themarsh.org/shows_and_events/misf-performance-descriptions/" target="_blank"
             class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg pointer-events-none group-hover:pointer-events-auto">
-            <span class="text-black font-bold text-lg">More info</span>
+            <span class="text-black font-bold text-lg block">Click for More Info</span>
         </a>
     </div>
 
@@ -682,61 +796,256 @@
 </section>
 
 
+<section id="exhibition" class="p-12 relative z-20 bg-black text-yellow-400">
 
-<section id="exhibition"
-         class="p-12 bg-neutral-900">
+  <h3 class="text-3xl font-extrabold text-yellow-400 mb-5 text-center">
+    Digital Exhibition
+  </h3>
 
-    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
-        Digital Exhibition
-    </h3>
+  <div class="max-w-3xl mx-auto shadow-md hover:shadow-lg transition mb-5">
+    <p class="text-yellow-400 leading-relaxed">
+      The research and documentation while collecting the story of Fontwala we started to imagine an exhibition of these references. We have had two opportunities to present in exhibition formats:
+    </p>
+  </div>
 
-    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
-        <p class="text-black leading-relaxed">Photos and Bios</p>
+  <!-- 2020 Exhibition -->
+  <div class="max-w-4xl mx-auto mb-12 bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+    <h4 class="mt-5 relative inline-block  px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right text-3xl font-extrabold">2020 - Diasporic Rhizome</h4>
+    <p class="text-yellow-300 mb-4">Virtual Digital Exhibition, South Asia Institute, Chicago.</p>
+
+    <div class="flex flex-col md:flex-row gap-6 items-start">
+      <img src="images/fontwala/diasporicRhizome.png" class="w-full md:w-1/3 rounded-lg shadow-md hover:scale-105 transition-transform">
+      <p class="text-yellow-300 leading-relaxed md:flex-1">
+        Diasporic Rhizome presented 21 artists who reexamined their histories, commented on current social issues, and dreamt of new realities. The 21 participating artists were selected from an open call by the following jury: Faisal Anwar, Ambika Trasi, Brendan Fernandes.
+      </p>
     </div>
+  </div>
+
+  <!-- 2019 Exhibition -->
+  <div class="max-w-4xl mx-auto mb-12 bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+     <h4 class="mt-5 relative inline-block  px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right text-3xl font-extrabold">2019 - Fontwala: Stone to Mobile, What Remains?</h4>
+    <p class="text-yellow-300 mb-4">In-person Digital Exhibition, Kaleidoscope Digital Art Gallery, New Delhi.</p>
+
+    <p class="text-yellow-300 mb-4">
+      Our work was exhibited on seven video screens and we held weekly Devanagari calligraphy workshops for attendees over the month-long exhibition. The exhibition was curated by Mukta Alhuwalia.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-1">
+      <img src="images/Fontwala-postcard-front.jpg" alt="" class="rounded-lg shadow-md hover:scale-105 transition-transform">
+      <img src="images/Fontwala-calligraphy.jpg" alt="" class="rounded-lg shadow-md hover:scale-105 transition-transform">
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="max-w-4xl mx-auto mb-12 bg-neutral-900 rounded-xl p-6  shadow-md hover:shadow-lg transition">
+     <h4 class="m-5 relative inline-block  px-4 py-1 text-black
+                   before:content-[''] before:absolute before:inset-0 
+                   before:bg-yellow-400 before:-skew-x-6 before:-z-10
+                   animate-slide-right text-3xl font-extrabold">Glimpse of Exhibition Videos</h4>
+
+    <div class="flex flex-col md:flex-row gap-6 items-center">
+      <a href="https://vimeo.com/showcase/6618243" target="_blank" class="relative group w-full md:w-1/3 rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform">
+        <img src="images/fontwala/playlist.png" alt="" class="w-full h-auto object-cover">
+      </a>
+      <p class="text-yellow-300 leading-relaxed md:flex-1">
+        Click image to watch videos. Use password <strong>'typehindi'</strong>.<br><br>
+        Note: Rajeev Prakash Khare's voiceovers are currently in Hindi only. English dubbing and captions will be added in the next iteration.<br><br>
+        Videos cover topics such as: aesthetic of complex script, battle of conjuncts and maatras, our everyday interaction with type, the long road to typing in Hindi on an English keyboard, and the legacies of pioneers who carried Devanagari from stone → metal → printing press → digital age.
+      </p>
+    </div>
+    <section id="devnagari-calligraphy" class="p-12">
+        <p class="max-w-xl mx-auto text-center text-yellow-300 mb-8 leading-relaxed text-md">
+            A selection of stills from the calligraphy workshops conducted during exhibitions,
+            highlighting the tactile craft behind each stroke.
+        </p>
+
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 max-w-5xl mx-auto">
+            <img src="images/fontwala/calligraphy1.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img src="images/fontwala/calligraphy2.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img src="images/fontwala/calligraphy3.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img src="images/fontwala/calligraphy4.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+        </div>
+    </section>
+  </div>
+
 </section>
 
+<section id="community-engagements" class="relative z-20 bg-black text-yellow-400 mt-12 p-12">
 
-<section id="artists"
-         class="p-12 bg-neutral-800">
+  <h3 class="text-3xl font-extrabold text-yellow-400 mb-12 text-center">
+    Community Engagements
+  </h3>
 
-    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
-        Artists
-    </h3>
+  <div class="max-w-3xl mx-auto bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition mb-12">
+    <p class="text-yellow-300 leading-relaxed">
+      Along with research and performances, Fontwala has engaged with audiences through interactive sessions,
+      public workshops, and calligraphy activities to bring the history of Devanagari typography into community spaces.
+    </p>
+  </div>
 
-    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
-        <p class="text-black leading-relaxed">Photos and Bios</p>
+  <!-- Images + Text -->
+  <div class="max-w-4xl mx-auto bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+      <img src="images/fontwala/dsa1.jpg" 
+           class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform"
+           alt="Community Engagement 1">
+      <img src="images/fontwala/dsa2.jpg" 
+           class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform"
+           alt="Community Engagement 2">
     </div>
+
+    <p class="text-yellow-300 leading-relaxed">
+      These engagements include Devanagari calligraphy workshops, experimental typography sessions,
+      and interactive conversations with students, designers, and local communities.
+      Through these events, participants explored the aesthetics of complex scripts,
+      experienced hands-on writing practices, and learned about the pioneers who shaped the evolution of Hindi type
+      from stone → metal → print → digital.
+    </p>
+
+     <p class="pt-5 text-center text-yellow-300 italic text-sm">Photos courtsey of Delhi Street Art.</p>
+
+  </div>
+
 </section>
 
+<section id="press" class="press-section relative">
 
-<section id="press"
-         class="p-12 bg-neutral-900">
+  <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+Press  </h3>
 
-    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
-        Press
-    </h3>
+  <div class="max-w-3xl mx-auto bg-neutral-900 rounded-xl shadow-md hover:shadow-lg transition mb-6 px-3 py-3">
+    <p class="text-yellow-300 leading-relaxed press-intro">
+        Through the years of this process of putting Fontwala's story out there, our digital exhibitions,
+        calligraphy demonstrations, solo and ensemble plays have garnered press from India, US and the UK.
+    </p>
+  </div>
+    
+    
 
-    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
-        <p class="text-black leading-relaxed">Screenshot of the press</p>
+    <div class="press-masonry">
+        <!-- ITEM 1 -->
+        <a class="press-item" href="https://www.kalw.org/podcast/sandip-roys-dispatches-from-kolkata/2023-04-05/the-fontwala" target="_blank">
+            <img src="./images/press/kalw.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">LISTEN</span>
+            <p>Audio Story on Fontwala Rajeev Prakash Khare as part of Dispatches from Kolkata by Sandip Roy on KALW Public Media / 91.7 FM Bay Area</p>
+        </a>
+
+        <!-- ITEM 2 -->
+         <a class="press-item" href="https://www.printweek.in/news/exhibition-showcases-the-development-of-devanagri-letterform-41957" target="_blank">
+            <img src="./images/press/printweek.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>Exhibition showcases the development of Devanagri letterform by Rahul Kumar in PrintWeek</p>
+        </a>
+        
+        <!-- ITEM 3 -->
+        <a class="press-item" href="https://lifestyle.livemint.com/news/opinion/the-man-who-brought-flourish-to-indian-typefaces-111679583263075.html" target="_blank">
+            <img src="./images/press/mint.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>The man who brought flourish to Indian typefaces by Sandip Roy as part of Mint Lounge</p>
+        </a>
+
+        <!-- ITEM 4 -->
+
+        <!-- ITEM 5 -->
+        <a class="press-item" 
+        href="./images/fontwala/play/apjarticle1.jpg" 
+        target="_blank">
+            <img src="./images/press/telegraph.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>Shubhra Prakash talks about getting a feel of Fontwala to Calcutta at Apeejay Kolkata Literary Festival 2023 in The Telegraph</p>
+        </a>
+
+        <!-- ITEM 6 -->
+        <a class="press-item" href="https://hindi.news18.com/news/literature/best-hindi-play-fontwala-hindi-natak-theater-in-delhi-based-on-rajeev-prakash-khare-life-by-shubhra-prakash-5823137.html" target="_blank">
+            <img src="./images/press/news18.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>कंप्यूटर में हिंदी फॉन्ट के जन्म लेने और बाजार से संघर्ष की गाथा है 'फॉन्टवाला' — by श्रीराम शर्मा in news18</p>
+        </a>
+
+        <a class="press-item" href="https://eyeondesign.aiga.org/in-the-90s-rajeev-prakash-reimagined-indic-scripts-for-the-digital-age/" target="_blank">
+            <img src="./images/press/aiga.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>How Rajeev Prakash Reimagined Indic Scripts for the Digital Age by Anoushka Khandwala</p>
+        </a>
+
+        <!-- ITEM 7 -->
+        <a class="press-item" href="https://www.pressreader.com/india/the-sunday-guardian/20190804/282162177832154" target="_blank">
+            <img src="./images/press/ians.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>Digital exhibition on the evolution of Devanagari script in The Sunday Guardian</p>
+        </a>
+
+        <!-- ITEM 8 -->
+        <a class="press-item" href="https://www.broadwayworld.com/off-off-broadway/article/Shubhra-Prakash-Explores-Indian-Scripts-In-Digital-Revolution-With-One-Woman-Show-FONTWALA-20221003" target="_blank">
+            <img src="./images/press/broadwayWorld.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>Shubhra Prakash Explores Indian Scripts In Digital Revolution With One-Woman Show FONTWALA</p>
+        </a>
+
+        <!-- ITEM 9 -->
+
+        <!-- ITEM 10 -->
+        <a class="press-item" href="https://www.youtube.com/watch?v=IuhiB3QqTdE" target="_blank">
+            <img src="./images/press/itvgold.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">WATCH</span>
+            <p>Face to Face with Shubhra Prakash - Playwright & Actor</p>
+        </a>
+        <a class="press-item" href="https://members.theatrebayarea.org/whatsplaying/Details/fontwala-1009132?sourceTypeId=Website" target="_blank">
+            <img src="./images/press/tba.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>Theatre Bay Area lists Fontwala as TBA Highlight! (Jan 31, 2024)</p>
+        </a>
+        <!-- ITEM 11 -->
+        <a class="press-item" href="https://thepatriot.in/culture/from-stone-to-phone-11268" target="_blank">
+            <img src="./images/press/patriot.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>From stone to phone by Proma Chakraborty for Patriot</p>
+        </a>
+        <a class="press-item" href="https://www.newindianexpress.com/cities/delhi/2019/aug/06/an-attempt-to-protect-indias-writing-legacy-2014883.html" target="_blank">
+            <img src="./images/press/indianExpress.jpg" alt="">
+            <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
+            <p>An attempt to protect India’s writing legacy by Ayesha Singh for The New Indian Express</p>
+        </a>
+
     </div>
-</section>
 
+    <!-- Video Section -->
+    <div class="press-video-block max-w-3xl mx-auto bg-neutral-900 rounded-xl shadow-md mb-6 px-3 py-3"">
+      <h3>Special coverage of our digital exhibition by National Indian Channel : Doordarshan HD for their program Rang Tarang</h3>
+
+      <div class="video-wrapper">
+          <iframe
+              loading="lazy"
+              src="https://www.youtube-nocookie.com/embed/1nz24a4cAOg?rel=0&modestbranding=1&playsinline=1"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen style="width:100%;height:100%;border:0;"></iframe>
+      </div>
+    </div>
+
+</section>
 
 <section id="contact"
          class="p-12 bg-neutral-800">
 
-    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center">
+    <h3 class="text-3xl font-extrabold text-yellow-400 mb-6 text-center relative">
         Contact / Booking
     </h3>
 
-    <div class="max-w-3xl mx-auto bg-yellow-400 rounded-xl p-6 shadow-md hover:shadow-lg transition">
-        <p class="text-black leading-relaxed">Contact / Booking</p>
+    <div class="max-w-3xl mx-auto rounded-xl bg-yellow-400 p-6 shadow-md hover:shadow-lg transition relative text-center">
+        <p class="text-black leading-relaxed font-extrabold text-xl">For all inquiries email <a href="mailto:shubhra.artist@gmail.com?subject='Website visitor'" target="_blank" class="text-blue-500 underline">shubhra.artist@gmail.com</a></p>
     </div>
 </section>
 
-
 <!-- Footer -->
-<footer class="text-center text-sm py-6 bg-black text-yellow-400 mt-16">
+<footer class="text-center text-sm py-6 bg-black text-yellow-400 mt-16 relative">
     © 2025 Fontwala. Designed for a dual world.
 </footer>
 
