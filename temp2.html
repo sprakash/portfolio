@@ -228,7 +228,7 @@
  
 
     <!-- Hamburger menu button (top-left) -->
-<div class="fixed top-4 right-4 z-50 m-5 bg-neutral-800 p-4 opacity-50 hover:opacity-100">
+<div class="fixed top-4 right-4 z-50 m-5 bg-neutral-900 p-4 opacity-70 hover:opacity-100">
     <button id="menuToggle"
         class="flex flex-col justify-between w-8 h-6 group focus:outline-none">
         <span class="block h-1 bg-yellow-400 rounded group-hover:bg-yellow-300 transition"></span>
@@ -741,7 +741,7 @@
 
 <section id="mediagallery">
   <section class="w-full px-4 pb-8 relative">
-  <h3 class="font-extrabold text-2xl tracking-wide text-yellow-400 mb-4 text-center relative p-4 bg-black">
+  <h3 class="font-extrabold text-3xl tracking-wide text-yellow-400 mb-4 text-center relative p-4 bg-black">
     Media Gallery
   </h3>
 
@@ -755,8 +755,8 @@
 <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4">
 
   <!-- Story moments -->
-  <div class="min-w-[280px] max-w-[320px] snap-center flex-shrink-0">
-    <p class="mb-2 text-sm font-bold text-yellow-300 text-center">
+  <div class="min-w-[280px] max-w-[480px] snap-center flex-shrink-0 relative">
+    <p class="mb-2 text-lg font-bold text-yellow-300 text-center">
       story moments
     </p>
 
@@ -787,8 +787,8 @@
   </div>
 
   <!-- One song, many stages -->
-  <div class="min-w-[280px] max-w-[320px] snap-center flex-shrink-0">
-    <p class="mb-2 text-sm font-bold text-yellow-300 text-center">
+  <div class="min-w-[280px] max-w-[480px] snap-center flex-shrink-0 relative">
+    <p class="mb-2 text-lg font-bold text-yellow-300 text-center">
       one song, many stages
     </p>
 
@@ -818,8 +818,8 @@
   </div>
 
   <!-- Trailers -->
-  <div class="min-w-[280px] max-w-[320px] snap-center flex-shrink-0">
-    <p class="mb-2 text-sm font-bold text-yellow-300 text-center">
+  <div class="min-w-[280px] max-w-[480px] snap-center flex-shrink-0 relative">
+    <p class="mb-2 text-lg font-bold text-yellow-300 text-center">
       trailers
     </p>
 
@@ -849,8 +849,8 @@
   </div>
 
   <!-- Applause moments -->
-  <div class="min-w-[280px] max-w-[320px] snap-center flex-shrink-0">
-    <p class="mb-2 text-sm font-bold text-yellow-300 text-center">
+  <div class="min-w-[280px] max-w-[480px] snap-center flex-shrink-0 relative">
+    <p class="mb-2 text-lg font-bold text-yellow-300 text-center">
       applause moments
     </p>
 
@@ -1012,6 +1012,7 @@
     </p>
   </div>
 
+
   <!-- 2020 Exhibition -->
   <div class="max-w-4xl mx-auto mb-12 bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition">
     <h4 class="mt-5 relative inline-block  px-4 py-1 text-black
@@ -1071,29 +1072,35 @@
             highlighting the tactile craft behind each stroke.
         </p>
 
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 max-w-5xl mx-auto">
+        <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
+      <!-- Background & Overlay -->
+      <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
+      <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
+
+        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 max-w-5xl mx-auto relative">
             <img loading="lazy" decoding="async"  src="images/fontwala/calligraphy1.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
             <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy2.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
             <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy3.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
             <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy4.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
         </div>
     </section>
+    </section>
   </div>
 
 </section>
 
-<section id="community-engagements" class="relative z-20 bg-black text-yellow-400 mt-8">
+<section id="community-engagements" class="relative z-20 text-yellow-400 mt-8">
 
-  <h3 class="text-3xl font-extrabold text-yellow-400 mb-12 text-center">
-    Community Engagements
-  </h3>
-
-   <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
+   <section class="relative py-12 bg-neutral-800 text-yellow-300 overflow-hidden">
       <!-- Background & Overlay -->
       <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
       <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
 
-  <div class="max-w-3xl mx-auto bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition mb-12 relative">
+      
+  <h3 class="text-3xl font-extrabold text-yellow-400 mb-12 text-center bg-black relative p-4">
+    Community Engagements
+  </h3>
+  <div class="max-w-3xl mx-auto bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg mb-6 transition relative">
     <p class="text-yellow-300 leading-relaxed">
       Along with research and performances, Fontwala has engaged with audiences through interactive sessions,
       public workshops, and calligraphy activities to bring the history of Devanagari typography into community spaces.
