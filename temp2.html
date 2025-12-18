@@ -3,10 +3,16 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fontwala —  about the arrival of Hindi language on the English keyboard.</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+
+      html, body {
+        min-width: 320px;
+        overflow-x: hidden;
+      }
+
         .h-screen-custom {
             height: 100dvh;
         }
@@ -233,33 +239,36 @@
 </div>
 
     <!-- Header -->
-    <header class="text-center py-8 bg-black/90 shadow-md backdrop-blur-sm">
+    <header class="text-center py-8 pb-12 bg-black/90 shadow-md backdrop-blur-sm">
         <h1 class="text-xl md:text-3xl font-extrabold tracking-tight text-yellow-400 flex flex-col justify-center items-center">
           <div class="flex w-3/4 items-center">
-            <img src="images/fontwala/fontwala-title.png" class="w-1/2 pr-6"/>
+            <img  loading="lazy" decoding="async" src="images/fontwala/fontwala-title.png" class="w-1/2 pr-6"/>
             
             <div class="w-px h-40 bg-yellow-400"></div>
             
-            <img src="images/fontwala/hindi-fontwala.jpg" class="w-1/2 pl-6"/>
+            <img  loading="lazy" decoding="async" src="images/fontwala/hindi-fontwala.jpg" class="w-1/2 pl-6"/>
           </div>
         <div class="text-center font-semibold text-2xl">— story of Indian letters surviving on the English keyboard. <p class="text-md font-semibold">a play, a digital exhibition and a documentary</p></div>
         </h1>
       
     </header>
-<nav id="miniNav" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50
-    flex flex-col md:flex-row
-    gap-3 md:gap-6
-    bg-yellow-400/60 backdrop-blur-sm
-    px-4 py-3 rounded-lg
-    text-black text-sm md:text-base">
-    <a href="#reviews" class="hover:text-yellow-300 transition font-bold">reviews</a>
-    <a href="#about" class="hover:text-yellow-300 transition font-bold">about</a>
-    <a href="#english" class="hover:text-yellow-300 transition font-bold">english solo</a>
-    <a href="#hindi-ensemble" class="hover:text-yellow-300 transition font-bold">hindi ensemble</a>
-    <a href="#exhibition" class="hover:text-yellow-300 transition font-bold">digital exhibition</a>
-    <a href="#press" class="hover:text-yellow-300 transition font-bold">press</a>
-    <a href="#documentary" class="hover:text-yellow-300 transition font-bold">documentary</a>
-    <a href="#contact" class="hover:text-yellow-300 transition font-bold">contact</a>
+<nav id="miniNav"
+  class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50
+         flex
+         flex-nowrap
+         gap-3 md:gap-6
+         bg-yellow-400/60 backdrop-blur-sm
+         px-6 py-3 rounded-lg
+         text-black text-sm md:text-base
+         max-w-none w-auto [@media(max-width:853px)]:hidden">
+    <a href="#reviews" class="hover:text-yellow-300 whitespace-nowrap font-bold">reviews</a>
+    <a href="#about" class="hover:text-yellow-300 whitespace-nowrap font-bold">about</a>
+    <a href="#english" class="hover:text-yellow-300 whitespace-nowrap font-bold">english solo</a>
+    <a href="#hindi-ensemble" class="hover:text-yellow-300 whitespace-nowrap font-bold">hindi ensemble</a>
+    <a href="#exhibition" class="hover:text-yellow-300 whitespace-nowrap font-bold">digital exhibition</a>
+    <a href="#press" class="hover:text-yellow-300 whitespace-nowrap font-bold">press</a>
+    <a href="#documentary" class="hover:text-yellow-300 whitespace-nowrap font-bold">documentary</a>
+    <a href="#contact" class="hover:text-yellow-300 whitespace-nowrap font-bold">contact</a>
 </nav>
 
     <!-- Split layout -->
@@ -268,16 +277,16 @@
   <section class="relative flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center overflow-hidden">
     <!-- Slideshow images -->
     <div class="absolute inset-0">
-        <img src="images/fontwala/play/solo-play.jpeg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
-        <img src="images/fontwala/play/manhattanville5.jpg"   loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/manhattanville.png"   loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/update-rising-thumb-fontwala.png"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/cba-1.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/meghna-review.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/kavita-review.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/review-cba.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">    
-        <img src="images/fontwala/play/apj.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-        <img src="images/fontwala/play/consulate-3.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/solo-play.jpeg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville5.jpg"   loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville.png"   loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/web-sf-marsh.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/cba-1.jpg"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/meghna-review.jpg"  loading="lazy" class="w-25 h-25 object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/kavita-review.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/review-cba.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">    
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/apj.jpg"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-3.jpg"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
       </div>
 
     <!-- Overlay for the image -->
@@ -287,7 +296,7 @@
     
     
  <!-- Text overlay on the side -->
-<div class="absolute top-[200px] right-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-right md:max-w-sm">
+<div class="absolute top-[115px] right-1 transform -translate-y-1/2 z-10 p-4 bg-black/70 rounded-lg max-w-xs text-right md:max-w-sm">
     <h2 class="text-2xl md:text-3xl font-bold mb-2 text-yellow-400">Solo play (English)</h2>
     <p class="text-yellow-300 text-sm md:text-base">A solo performance in English, rich with characters, presented on stages, in libraries, classrooms, printing presses, and any invited spaces across the U.S / India.</p>
     <a href="#english" class="mt-4 inline-block px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore English version</a>
@@ -298,17 +307,17 @@
     <section class="relative flex flex-col justify-center items-center p-8 text-center overflow-hidden">
         <!-- Slideshow images -->
         <div class="absolute inset-0">
-            <img src="images/fontwala/play/ensemble2.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble03.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble8.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble9.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble00.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble5.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble01.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble1.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble0.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble11.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
-            <img src="images/fontwala/play/ensemble12.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble2.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble03.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble8.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-100 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble9.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble00.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble5.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble01.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble1.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble0.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble11.JPG"  loading="lazy" class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
+            <img  loading="lazy" decoding="async" src="images/fontwala/play/ensemble12.JPG"  loading="lazy" class="w-full h-full object-contain absolute top-0 left-0 opacity-0 transition-opacity duration-1000">
           </div>
 
         <!-- Overlay for readability -->
@@ -317,7 +326,7 @@
         <!-- Text content -->
 
 
-    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-left md:max-w-sm">
+    <div class="absolute top-3/4 left-1 transform -translate-y-1/2 z-10 p-4 bg-black/60 rounded-lg max-w-xs text-left md:max-w-sm">
     <h2 class="text-2xl md:text-3xl font-bold mb-2 text-yellow-400">Ensemble play (हिंदी)</h2>
     <p class="text-yellow-300 text-sm md:text-base">A company of actors performing the story of Fontwala in Hindi and languages it was lived in, imagined for stages across India.</p>
     <a href="#hindi-ensemble" class="mt-4 inline-block px-6 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 transition">Explore हिंदी version </a>
@@ -342,7 +351,7 @@
       <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
           onclick="openVideo('piw-ni41qmY', 0)">
 
-          <img src="images/fontwala/review.png" class="w-full h-full object-contain"
+          <img  loading="lazy" decoding="async" src="images/fontwala/review.png" class="w-full h-full object-contain"
                   alt="Audience Reviews Thumbnail">
               <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
                   <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
@@ -353,7 +362,7 @@
           <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
           onclick="openVideo('dJSn1363zDE', 0)">
 
-          <img src="images/fontwala/bob-review.png" class="w-full h-full object-contain"
+          <img  loading="lazy" decoding="async" src="images/fontwala/bob-review.png" class="w-full h-full object-contain"
                   alt="Bob's review">
               <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
                   <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
@@ -396,7 +405,7 @@
         
         <!-- Image -->
          <a href="http://rajeevfontwala.com" target="_blank">
-          <img src="images/rajeev-typoface.jpg" loading="lazy"
+          <img  loading="lazy" decoding="async" src="images/rajeev-typoface.jpg" loading="lazy"
              class="w-full max-w-md mx-auto rounded-xl shadow-lg object-contain 
                     hover:scale-105 transition-transform duration-300">
          </a>
@@ -453,7 +462,7 @@
     </ul>
 
     <!-- Image -->
-    <img src="images/fontwala/anglonagarikeyboard.jpg" loading="lazy"
+    <img  loading="lazy" decoding="async" src="images/fontwala/anglonagarikeyboard.jpg" loading="lazy"
          class="w-full max-w-md mx-auto shadow-lg object-contain
                 hover:scale-105 transition-transform duration-300">
 </div>
@@ -528,7 +537,7 @@
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group overflow-hidden">
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, Sept 25</h4>
         <p class="text-yellow-400 text-sm leading-snug">San Francisco Center For The Book</p>
-        <img src="images/fontwala/play/sfcbfb.png" class="w-full h-auto object-cover rounded-lg mt-2">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/sfcbfb.png" class="w-full h-auto object-cover rounded-lg mt-2">
 
         <!-- Desktop overlay -->
         <div class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg pointer-events-none group-hover:pointer-events-auto">
@@ -540,13 +549,13 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, Sept 12</h4>
         <p class="text-yellow-400 text-sm leading-snug mb-2">Manhattanville College NY</p>
         <div class="relative w-full h-40 overflow-hidden">
-          <img src="images/fontwala/play/manhattanville1.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/manhattanville2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/manhattanville3.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/manhattanville4.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/manhattanville5.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/manhattanville6.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/manhattanville7.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville1.jpg" class="slideshow-img w-full h-full object-cover">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville3.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville4.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville5.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville6.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/manhattanville7.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
 
          <!-- Overlay -->
@@ -559,8 +568,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, Aug 3, 4 & 9</h4>
         <p class="text-yellow-400 text-sm leading-snug">TheMarsh In Front Of Your Eyes Festival SF</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/marsh-aug.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/web-sf-marsh.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async"  src="images/fontwala/play/marsh-aug.jpg" class="slideshow-img w-full h-full object-cover">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/web-sf-marsh.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://themarsh.org/shows_and_events/marshstream/festival-shubhra-prakash/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -572,8 +581,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, March 29</h4>
         <p class="text-yellow-400 text-sm leading-snug mb-2">Columbia University, (Sabha)</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow rounded-lg">
-          <img src="images/fontwala/play/sabha-1.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/sabha-2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/sabha-1.jpg" class="slideshow-img w-full h-full object-cover">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/sabha-2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://engage.tc.columbia.edu/events/79796"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -584,7 +593,7 @@
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group">
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, Feb 6</h4>
         <p class="text-yellow-400 text-sm leading-snug">Untold Mother Tongue Festival Columbia NY</p>
-        <img src="images/fontwala/play/unspoken.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/unspoken.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
         <a href="https://photos.google.com/share/AF1QipOq4Vse7eTFucuTwvNA2iULaLHbnehHai4F9ilB5vYNv25-HKd_dI4rmjuE389W4Q?key=Y25sR19sY0pNdk1nZzdxdElMRkpNellsenFyUGFB"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
             <span class="text-black font-bold text-lg">Click for More Info</span>
@@ -594,7 +603,7 @@
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group">
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2024, Jan 31</h4>
         <p class="text-yellow-400 text-sm leading-snug">TheMarsh Rising SF</p>
-        <img src="images/fontwala/play/rising-fontwala-sf.png" class="w-full h-auto object-cover rounded-lg mt-2">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/rising-fontwala-sf.png" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
         <a href="https://themarsh.org/shows_and_events/marshstream/marsh-risings-shubhra-prakash/"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
             <span class="text-black font-bold text-lg">Click for More Info</span>
@@ -606,12 +615,12 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, Oct 20</h4>
         <p class="text-yellow-400 text-sm leading-snug mb-2">Indian Consulate New York</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/consulate-1.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/consulate-2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/consulate-3.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/consulate-4.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/consulate-5.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
-          <img src="images/fontwala/play/consulate-6.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-1.jpg" class="slideshow-img w-full h-full object-cover">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-2.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-3.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-4.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-5.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img  loading="lazy" decoding="async" src="images/fontwala/play/consulate-6.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://docs.google.com/document/d/11Dn0sLSTRxhcO3ARMctWMXvDCBLrQp2KHUxXqIVnlNM/edit?usp=sharing"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -622,7 +631,7 @@
       <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group">
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, Sept 22</h4>
         <p class="text-yellow-400 text-sm leading-snug">Queens College Writing class with Immigrant students</p>
-        <img src="images/fontwala/play/queensclass.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/queensclass.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
         <!-- Overlay -->
         <div class="absolute inset-0 bg-yellow-400 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
             <span class="text-black font-bold text-lg p-4">An excerpt of Fontwala performed for a writing class with immigrant students at Queens College.</span>
@@ -633,8 +642,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, Aug 26</h4>
         <p class="text-yellow-400 text-sm leading-snug">Brooklyn Library, Fontwala: A Solo Play on Tech, Language, and Migration</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/brooklynlib-1.png" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/brooklynlib.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/brooklynlib-1.png" class="slideshow-img w-full h-full object-cover">
+          <img loading="lazy" decoding="async" src="images/fontwala/play/brooklynlib.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://www.bklynlibrary.org/calendar/fontwala-solo-play-tech-central-library-business-20230826"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -646,8 +655,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, July 28 - 30</h4>
         <p class="text-yellow-400 text-sm leading-snug">Theatrelab Run NY</p>
         <div class="relative w-full h-[130px] overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/theatrelab-2023-1.jpg" class="slideshow-img w-full h-full object-contain">
-          <img src="images/fontwala/play/theaterlab-2023-2.png" class="slideshow-img w-full h-full object-contain opacity-0">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/theatrelab-2023-1.jpg" class="slideshow-img w-full h-full object-contain">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/theaterlab-2023-2.png" class="slideshow-img w-full h-full object-contain opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://theaterlabnyc.com/fontwala-july-28-30-2023/"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -659,8 +668,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, July 25</h4>
         <p class="text-yellow-400 text-sm leading-snug">Center of Book Arts, Fontwala Book Talk</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/cba-2.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/cba-1.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/cba-2.jpg" class="slideshow-img w-full h-full object-cover">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/cba-1.jpg" class="slideshow-img w-full h-full object-contain bg-white opacity-0">
         </div>
         <!-- Overlay -->
         <a href="https://centerforbookarts.org/product/calendar/book-talk/booktalk-shubhra-pakrash"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -672,8 +681,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, Mar 31</h4>
         <p class="text-yellow-400 text-sm leading-snug">American Center, New Delhi, India</p>
         <div class="relative w-full h-[150px] overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/mar2023-americanCenter.jpg" class="slideshow-img w-full h-full object-contain">
-          <img src="images/fontwala/play/performance.JPG" class="slideshow-img w-full h-full object-contain opacity-0">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/mar2023-americanCenter.jpg" class="slideshow-img w-full h-full object-contain">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/performance.JPG" class="slideshow-img w-full h-full object-contain opacity-0">
         </div>
         <!-- Overlay -->
           <a href="https://www.facebook.com/events/606784607969902/?ref=newsfeed"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -688,8 +697,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2023, Jan 13</h4>
         <p class="text-yellow-400 text-sm leading-snug">Apeejay Kolkata Literary Festival, Kolkata, India</p>
         <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-          <img src="images/fontwala/play/apj.jpg" class="slideshow-img w-full h-full object-cover">
-          <img src="images/fontwala/play/jan2023-aklf.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/apj.jpg" class="slideshow-img w-full h-full object-cover">
+          <img loading="lazy" decoding="async"  src="images/fontwala/play/jan2023-aklf.jpg" class="slideshow-img w-full h-full object-cover opacity-0">
         </div>
         <!-- Overlay -->
         <a href="images/fontwala/play/apjarticle1.jpg"  target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -702,8 +711,8 @@
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2022, Oct 17 - 22</h4>
         <p class="text-yellow-400 text-sm leading-snug">Bowery Poetry NY Run</p>
             <div class="relative w-full aspect-square overflow-hidden mini-slideshow">
-                <img src="images/fontwala/play/fontwala-poster.png" class="slideshow-img w-full h-auto object-cover rounded-lg mt-2">
-                <img src="images/fontwala/play/solo-play.jpeg" class="slideshow-img w-full h-auto object-cover rounded-lg mt-2">
+                <img loading="lazy" decoding="async"  src="images/fontwala/play/fontwala-poster.png" class="slideshow-img w-full h-auto object-cover rounded-lg mt-2">
+                <img loading="lazy" decoding="async"  src="images/fontwala/play/solo-play.jpeg" class="slideshow-img w-full h-auto object-cover rounded-lg mt-2">
             </div>
         <!-- Overlay -->
         <a href="https://www.youtube.com/watch?v=6_LXUCLVUDQ" target="_blank" class="absolute inset-0 bg-yellow-400 bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-lg">
@@ -714,7 +723,7 @@
      <div class="break-inside-avoid mb-4 rounded-xl shadow-md p-4 bg-black relative group">
         <h4 class="font-bold text-yellow-400 text-lg mb-2">2022, Mar 25</h4>
         <p class="text-yellow-400 text-sm leading-snug">Virtual TheMarsh International Solo Festival Online</p>
-        <img src="images/fontwala/play/mar2022-theMarsh.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
+        <img  loading="lazy" decoding="async" src="images/fontwala/play/mar2022-theMarsh.jpg" class="w-full h-auto object-cover rounded-lg mt-2">
 
         <!-- Overlay -->
         <a href="https://themarsh.org/shows_and_events/misf-performance-descriptions/" target="_blank"
@@ -739,81 +748,81 @@
     
     <!-- Ensemble images -->
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/2023indianAkshara.jpg" class="w-full h-96 object-cover"/>
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/2023indianAkshara.jpg" class="w-full h-96 object-cover"/>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble7.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble7.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">FONTWALA (Vipin Kumar) a child's play</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble2.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble2.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400"> SALESMAN (Swapnil Chitransh) selling APS Publishing Software</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble8.JPG" class="w-full h-96 object-cover"/>
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble8.JPG" class="w-full h-96 object-cover"/>
       <label class="text-[12px] text-yellow-400">FONTWALA (Vipin Kumar)  &amp; DANCER (Katyayani Bakshi)</label>
     </div>
     
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble9.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble9.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">PRESSMAN (Siddhart Malhotra) Printing press will lead us to freedom</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble5.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble5.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">MARY (Anita Bates) sharing an epiphany on Khonsai</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble3.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble3.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">DANCER (Katyayani Bakshi) comes alive from monument walls</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble01.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble01.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">GUIDE (Abhishek Mishra) confronted by questions from FONTWALA (Vipin Kumar)</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble00.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble00.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">FONTWALA (Vipin Kumar) & SHILPI (Shubhra Prakash) in the world of Anglo Nagari Keyboard</label>    
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble0.JPG" class="w-full h-96 object-cover">
+      <img loading="lazy" decoding="async"  src="./images/fontwala/play/ensemble0.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">KAUSTABH (Aryan Panwar) programmer, genius, believer, forever optimist</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble02.JPG" class="w-full h-96 object-cover">
+      <img loading="lazy" decoding="async"  src="./images/fontwala/play/ensemble02.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">CHAIWALA (Abhishek Mishra) & KAUSTABH (Aryan Panwar) May be chai can solve our problems</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble4.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble4.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">SHILPI (Shubhra Prakash) & FONTWALA (Vipin Kumar) letterforms revolt</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble6.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/ensemble6.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">SHILPI (Shubhra Prakash) The job of writing headlines on magazine covers</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble03.JPG" class="w-full h-96 object-cover">
+      <img loading="lazy" decoding="async"  src="./images/fontwala/play/ensemble03.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">MEGHA (Lalita) A visual artist looking at Teejan bai's expressions</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/ensemble10.JPG" class="w-full h-96 object-cover">
+      <img loading="lazy" decoding="async"  src="./images/fontwala/play/ensemble10.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400">FONTWALA (Vipin Kumar) and songs of his village</label>
     </div>
 
     <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
-      <img src="./images/fontwala/play/calligraphy-ensemble.JPG" class="w-full h-96 object-cover">
+      <img  loading="lazy" decoding="async" src="./images/fontwala/play/calligraphy-ensemble.JPG" class="w-full h-96 object-cover">
       <label class="text-[12px] text-yellow-400"> Rajeev Prakash, The Fontwala creating pre-show calligraphy</label>
     </div>
 
@@ -1047,10 +1056,10 @@
         </p>
 
         <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4 max-w-5xl mx-auto">
-            <img src="images/fontwala/calligraphy1.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
-            <img src="images/fontwala/calligraphy2.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
-            <img src="images/fontwala/calligraphy3.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
-            <img src="images/fontwala/calligraphy4.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img loading="lazy" decoding="async"  src="images/fontwala/calligraphy1.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy2.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy3.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
+            <img  loading="lazy" decoding="async" src="images/fontwala/calligraphy4.jpg" class="w-full rounded-xl shadow-md hover:scale-105 transition" />
         </div>
     </section>
   </div>
@@ -1074,10 +1083,10 @@
   <div class="max-w-4xl mx-auto bg-neutral-900 rounded-xl p-6 shadow-md hover:shadow-lg transition">
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-      <img src="images/fontwala/dsa1.jpg" 
+      <img loading="lazy" decoding="async"  src="images/fontwala/dsa1.jpg" 
            class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform"
            alt="Community Engagement 1">
-      <img src="images/fontwala/dsa2.jpg" 
+      <img loading="lazy" decoding="async"  src="images/fontwala/dsa2.jpg" 
            class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform"
            alt="Community Engagement 2">
     </div>
@@ -1113,21 +1122,21 @@ Press  </h3>
     <div class="press-masonry">
         <!-- ITEM 1 -->
         <a class="press-item" href="https://www.kalw.org/podcast/sandip-roys-dispatches-from-kolkata/2023-04-05/the-fontwala" target="_blank">
-            <img src="./images/press/kalw.jpg" alt="">
+            <img loading="lazy" decoding="async"  src="./images/press/kalw.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">LISTEN</span>
             <p>Audio Story on Fontwala Rajeev Prakash Khare as part of Dispatches from Kolkata by Sandip Roy on KALW Public Media / 91.7 FM Bay Area</p>
         </a>
 
         <!-- ITEM 2 -->
          <a class="press-item" href="https://www.printweek.in/news/exhibition-showcases-the-development-of-devanagri-letterform-41957" target="_blank">
-            <img src="./images/press/printweek.jpg" alt="">
+            <img loading="lazy" decoding="async"  src="./images/press/printweek.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>Exhibition showcases the development of Devanagri letterform by Rahul Kumar in PrintWeek</p>
         </a>
         
         <!-- ITEM 3 -->
         <a class="press-item" href="https://lifestyle.livemint.com/news/opinion/the-man-who-brought-flourish-to-indian-typefaces-111679583263075.html" target="_blank">
-            <img src="./images/press/mint.jpg" alt="">
+            <img loading="lazy" decoding="async"  src="./images/press/mint.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>The man who brought flourish to Indian typefaces by Sandip Roy as part of Mint Lounge</p>
         </a>
@@ -1138,34 +1147,34 @@ Press  </h3>
         <a class="press-item" 
         href="./images/fontwala/play/apjarticle1.jpg" 
         target="_blank">
-            <img src="./images/press/telegraph.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/telegraph.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>Shubhra Prakash talks about getting a feel of Fontwala to Calcutta at Apeejay Kolkata Literary Festival 2023 in The Telegraph</p>
         </a>
 
         <!-- ITEM 6 -->
         <a class="press-item" href="https://hindi.news18.com/news/literature/best-hindi-play-fontwala-hindi-natak-theater-in-delhi-based-on-rajeev-prakash-khare-life-by-shubhra-prakash-5823137.html" target="_blank">
-            <img src="./images/press/news18.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/news18.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>कंप्यूटर में हिंदी फॉन्ट के जन्म लेने और बाजार से संघर्ष की गाथा है 'फॉन्टवाला' — by श्रीराम शर्मा in news18</p>
         </a>
 
         <a class="press-item" href="https://eyeondesign.aiga.org/in-the-90s-rajeev-prakash-reimagined-indic-scripts-for-the-digital-age/" target="_blank">
-            <img src="./images/press/aiga.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/aiga.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>How Rajeev Prakash Reimagined Indic Scripts for the Digital Age by Anoushka Khandwala</p>
         </a>
 
         <!-- ITEM 7 -->
         <a class="press-item" href="https://www.pressreader.com/india/the-sunday-guardian/20190804/282162177832154" target="_blank">
-            <img src="./images/press/ians.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/ians.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>Digital exhibition on the evolution of Devanagari script in The Sunday Guardian</p>
         </a>
 
         <!-- ITEM 8 -->
         <a class="press-item" href="https://www.broadwayworld.com/off-off-broadway/article/Shubhra-Prakash-Explores-Indian-Scripts-In-Digital-Revolution-With-One-Woman-Show-FONTWALA-20221003" target="_blank">
-            <img src="./images/press/broadwayWorld.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/broadwayWorld.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>Shubhra Prakash Explores Indian Scripts In Digital Revolution With One-Woman Show FONTWALA</p>
         </a>
@@ -1174,23 +1183,23 @@ Press  </h3>
 
         <!-- ITEM 10 -->
         <a class="press-item" href="https://www.youtube.com/watch?v=IuhiB3QqTdE" target="_blank">
-            <img src="./images/press/itvgold.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/itvgold.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">WATCH</span>
             <p>Face to Face with Shubhra Prakash - Playwright & Actor</p>
         </a>
         <a class="press-item" href="https://members.theatrebayarea.org/whatsplaying/Details/fontwala-1009132?sourceTypeId=Website" target="_blank">
-            <img src="./images/press/tba.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/tba.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>Theatre Bay Area lists Fontwala as TBA Highlight! (Jan 31, 2024)</p>
         </a>
         <!-- ITEM 11 -->
         <a class="press-item" href="https://thepatriot.in/culture/from-stone-to-phone-11268" target="_blank">
-            <img src="./images/press/patriot.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/patriot.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>From stone to phone by Proma Chakraborty for Patriot</p>
         </a>
         <a class="press-item" href="https://www.newindianexpress.com/cities/delhi/2019/aug/06/an-attempt-to-protect-indias-writing-legacy-2014883.html" target="_blank">
-            <img src="./images/press/indianExpress.jpg" alt="">
+            <img  loading="lazy" decoding="async" src="./images/press/indianExpress.jpg" alt="">
             <span class="press-tag bg-yellow-400 text-black text-lg">READ</span>
             <p>An attempt to protect India’s writing legacy by Ayesha Singh for The New Indian Express</p>
         </a>
@@ -1225,7 +1234,7 @@ Press  </h3>
     class="relative w-full max-w-xl aspect-video rounded-xl overflow-hidden border border-yellow-500 shadow-lg cursor-pointer transition-transform hover:scale-[1.02]"
     onclick="openVideo('sd9QAYPTTlU', 0)"
   >
-    <img 
+    <img  loading="lazy" decoding="async" 
       src="images/fontwala/trailerthumb.png" 
       alt="Fontwala Documentary Trailer" 
       class="w-full h-full object-cover"
