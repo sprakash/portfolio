@@ -240,14 +240,14 @@
     <!-- Header -->
     <header class="text-center py-8 pb-12 bg-black/90 shadow-md backdrop-blur-sm">
         <h1 class="text-xl md:text-3xl font-extrabold tracking-tight text-yellow-400 flex flex-col justify-center items-center">
-          <div class="flex w-3/4 items-center">
-            <img  loading="lazy" decoding="async" src="images/fontwala/fontwala-title.png" class="w-1/2 pr-6"/>
+          <div class="flex w-3/4 items-center [@media(max-width:767px)]:flex-col">
+            <img  loading="lazy" decoding="async" src="images/fontwala/fontwala-title.png" class="w-1/2 pr-6 [@media(max-width:767px)]:w-4/5"/>
             
-            <div class="w-px h-40 bg-yellow-400"></div>
+            <div class="w-px h-40 bg-yellow-400 [@media(max-width:767px)]:hidden"></div>
             
-            <img  loading="lazy" decoding="async" src="images/fontwala/hindi-fontwala.jpg" class="w-1/2 pl-6"/>
+            <img  loading="lazy" decoding="async" src="images/fontwala/hindi-fontwala.jpg" class="w-1/2 pl-6 [@media(max-width:767px)]:w-3/4"/>
           </div>
-        <div class="text-center font-semibold text-2xl">— story of Indian letters surviving on the English keyboard. <p class="text-md font-semibold">a play, a digital exhibition and a documentary</p></div>
+        <div class="text-center font-semibold text-2xl [@media(max-width:767px)]:mt-10 [@media(max-width:510px)]:text-sm">— story of Indian letters surviving on the English keyboard. <p class="text-md font-semibold">a play, a digital exhibition and a documentary</p></div>
         </h1>
       
     </header>
@@ -259,7 +259,7 @@
          bg-yellow-400/60 backdrop-blur-sm
          px-6 py-3 rounded-lg
          text-black text-sm md:text-base
-         max-w-none w-auto [@media(max-width:853px)]:hidden">
+         max-w-none w-auto [@media(max-width:976px)]:hidden">
     <a href="#reviews" class="hover:text-yellow-300 whitespace-nowrap font-bold">reviews</a>
     <a href="#about" class="hover:text-yellow-300 whitespace-nowrap font-bold">about</a>
     <a href="#mediagallery" class="hover:text-yellow-300 whitespace-nowrap font-bold">media gallery</a>
@@ -272,7 +272,7 @@
 </nav>
 
     <!-- Split layout -->
-   <main class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
+   <main id="home" class="grid grid-cols-1 md:grid-cols-2 gap-0 h-screen-custom">
 
   <section class="relative flex flex-col justify-center items-center p-8 border-b md:border-b-0 md:border-r border-yellow-600 text-center overflow-hidden">
     <!-- Slideshow images -->
@@ -336,58 +336,7 @@
 </main>
 <section class="relative w-full bg-repeat bg-center bg-contain">
 
-    <!-- Overlay to dim the background so text is readable -->
-    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
-
-    <!-- Inner content -->
-    <div class="relative z-10">
-
-         <!-- Audience Review Video (Fontwala) -->
-            <h3 id="reviews" class="text-4xl md:text-5xl font-extrabold mt-4 text-yellow-400 text-center border-yellow-500">Reviews</h3>
-
-    <div class="flex justify-center my-8 p-10 gap-10 bg-yellow-500">
-
-                          
-      <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
-          onclick="openVideo('piw-ni41qmY', 0)">
-
-          <img  loading="lazy" decoding="async" src="images/fontwala/review.png" class="w-full h-full object-contain"
-                  alt="Audience Reviews Thumbnail">
-              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
-                  <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
-                      <polygon points="16,12 16,52 48,32" />
-                  </svg>
-              </div>
-          </div>
-          <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
-          onclick="openVideo('dJSn1363zDE', 0)">
-
-          <img  loading="lazy" decoding="async" src="images/fontwala/bob-review.png" class="w-full h-full object-contain"
-                  alt="Bob's review">
-              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
-                  <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
-                      <polygon points="16,12 16,52 48,32" />
-                  </svg>
-              </div>
-          </div>
-        </div>
-        </div>
-
-
-
-
-    <div id="videoModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
-                    <div class="relative w-full max-w-3xl">
-                        <button onclick="closeVideo()"
-                            class="absolute top-2 right-2 text-yellow-300 text-3xl z-50">✖</button>
-                        <div class="aspect-video">
-                            <iframe id="modalIframe" class="w-full h-full" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-      </div>
-<section id="about" class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
+  <section id="about" class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
     <!-- Background & Overlay -->
     <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
     <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
@@ -463,7 +412,7 @@
 
     <!-- Image -->
     <img  loading="lazy" decoding="async" src="images/fontwala/anglonagarikeyboard.jpg" loading="lazy"
-         class="w-full max-w-md mx-auto shadow-lg object-contain
+         class="w-full max-w-2xl mx-auto shadow-lg object-contain
                 hover:scale-105 transition-transform duration-300">
 </div>
 </div>
@@ -514,11 +463,63 @@
     </div>
 </div>
 </section>
+    <!-- Overlay to dim the background so text is readable -->
+    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+
+    <!-- Inner content -->
+    <div class="relative z-10">
+
+         <!-- Audience Review Video (Fontwala) -->
+            <h3 id="reviews" class="text-4xl md:text-5xl font-extrabold mt-4 text-yellow-400 text-center border-yellow-500">Reviews</h3>
+
+    <div class="flex justify-center my-8 p-10 gap-10 bg-yellow-500 [@media(max-width:767px)]:p-0 [@media(max-width:767px)]:gap-0 [@media(max-width:580px)]:flex-col">
+
+                          
+      <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
+          onclick="openVideo('piw-ni41qmY', 0)">
+
+          <img  loading="lazy" decoding="async" src="images/fontwala/review.png" class="w-full h-full object-contain"
+                  alt="Audience Reviews Thumbnail">
+              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
+                  <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="16,12 16,52 48,32" />
+                  </svg>
+              </div>
+          </div>
+      <div class="relative cursor-pointer w-full max-w-xl aspect-video rounded-lg overflow-hidden border border-yellow-500 shadow-lg"
+          onclick="openVideo('dJSn1363zDE', 0)">
+
+          <img  loading="lazy" decoding="async" src="images/fontwala/bob-review.png" class="w-full h-full object-contain"
+                  alt="Bob's review">
+              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition">
+                  <svg class="w-12 h-12" viewBox="0 0 64 64" fill="yellow" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="16,12 16,52 48,32" />
+                  </svg>
+              </div>
+          </div>
+        </div>
+        </div>
+
+
+
+
+    <div id="videoModal" class="fixed inset-0 bg-black/80 flex items-center justify-center z-50 hidden">
+                    <div class="relative w-full max-w-3xl">
+                        <button onclick="closeVideo()"
+                            class="absolute top-2 right-2 text-yellow-300 text-3xl z-50">✖</button>
+                        <div class="aspect-video">
+                            <iframe id="modalIframe" class="w-full h-full" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+      </div>
+
 
 <!-- SECTION TEMPLATE (Yellow Cards Style) -->
 
 
-<section id="english" class="px-12 pt-12 pb-4">
+<section id="english" class="px-12 pt-12 pb-4 [@media(max-width:976px)]:px-0">
 
   <div class="mb-6 text-center relative z-20 text-yellow-400">
   <h3 class="text-4xl font-extrabold">🎭 English Solo shows so far!</h3>
@@ -529,7 +530,7 @@
 </div>
    
 
-  <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
+  <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden [@media(max-width:880px)]:p-4">
     <!-- Background & Overlay -->
     <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
     <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
@@ -752,7 +753,7 @@
 
 <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth justify-center">
 <!-- Horizontal video strip -->
-<div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4">
+<div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4  [@media(max-width:680px)]:flex-col [@media(max-width:680px)]:p-3">
 
   <!-- Story moments -->
   <div class="min-w-[280px] max-w-[480px] snap-center flex-shrink-0 relative">
@@ -891,7 +892,7 @@
   <h3 class="text-yellow-400 bg-black opacity-[75%] mb-6 text-center"> 
     <div class="text-4xl font-extrabold pb-10 ">🎭 Hindi Ensemble</div>
     <label class="font-extrabold text-2xl">"सुन्दर लेखन आपकी मनोदशा को दर्शाता है"</label>
-    <div class="text-lg py-5 max-w-6xl mx-auto columns-1">Fontwala's journey needs the native tongue and dialects that it has lived in. This meant performing the story in the Hindi language with support from Bhojpuri, Boundelkhandi and Marathi languages which are all encountered by Fontwala in his journey. The Hindi rendition of the play was written by Shubhra Prakash, directed by Shubhra Prakash and Swapnil Chitransh of Swaang Ghar collective of New Delhi, India. The full ensemble play had two ensemble shows performed on April 7, 2023 at Akshara Theater New Delhi. <br/> A calligraphy demonstration by Fontwala, Rajeev Prakash himself was conducted before the play performance. </div>
+    <div class="text-lg py-5 max-w-6xl mx-auto columns-1 [@media(max-width:880px)]:px-10">Fontwala's journey needs the native tongue and dialects that it has lived in. This meant performing the story in the Hindi language with support from Bhojpuri, Boundelkhandi and Marathi languages which are all encountered by Fontwala in his journey. The Hindi rendition of the play was written by Shubhra Prakash, directed by Shubhra Prakash and Swapnil Chitransh of Swaang Ghar collective of New Delhi, India. The full ensemble play had two ensemble shows performed on April 7, 2023 at Akshara Theater New Delhi. <br/> A calligraphy demonstration by Fontwala, Rajeev Prakash himself was conducted before the play performance. </div>
        <label class="text-center mx-auto text-white">thumb over to see more photos, photo credit Abhishek Srivastava <a href="https://www.instagram.com/shout_silently/" target="_blank" class="text-blue-600">@shout_silently</a></label>
 </h3>
 
@@ -901,7 +902,7 @@
       <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
 
     <!-- Horizontal scroll container -->
-    <div class="flex overflow-x-auto space-x-2 pb-4 px-1 snap-x snap-mandatory">
+    <div class="flex overflow-x-auto space-x-2 pb-4 px-1 snap-x snap-mandatory [@media(max-width:680px)]:flex-col">
       
       <!-- Ensemble images -->
       <div class="flex-shrink-0 w-84 shadow-md p-1 bg-black relative group overflow-hidden snap-start">
@@ -1145,7 +1146,7 @@ Press  </h3>
     </p>
   </div>
 
-   <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden">
+   <section class="relative p-12 bg-neutral-800 text-yellow-300 overflow-hidden [@media(max-width:796px)]:px-6">
       <!-- Background & Overlay -->
       <div class="absolute inset-0 bg-[url('images/fontwala/rotatedAngloNagari.jpg')] bg-center bg-contain opacity-20 pointer-events-none"></div>
       <div class="absolute inset-0 bg-black/50 pointer-events-none"></div>
