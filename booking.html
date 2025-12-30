@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontwala | A Theatre Project by Shubhra Prakash</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfdfd;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            background: #222;
+            padding: 0.75rem 0;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .formats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .format {
+            flex: 1 1 300px;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .format h3 {
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 6px;
+        }
+
+        .video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn {
+            background: #000;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            background: #111;
+            color: #aaa;
+            padding: 2rem 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FONTWALA</h1>
+        <p>A multilingual, border-crossing theatre project about typography, memory, and migration — created and
+            performed by Shubhra Prakash</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#formats">Formats</a>
+        <a href="#media">Media</a>
+        <a href="#tour">Tour</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About the Project</h2>
+        <p><strong>FONTWALA</strong> is a solo and ensemble theatre piece inspired by the life and work of Rajeev
+            Prakash — an Indian typographer and font designer whose legacy spans over 20 scripts and keyboard systems.
+            It blends personal archive, migration, and the transformation of Indian languages across borders and
+            platforms — from stone to mobile.</p>
+    </section>
+
+    <section id="formats">
+        <h2>Performance Formats</h2>
+        <div class="formats">
+            <div class="format">
+                <h3>🎭 Solo Performance (English)</h3>
+                <p>Written and performed by Shubhra Prakash.<br> Directed by Marcus Yi & Ekene Okobi.</p>
+                <p>Performed in New York, San Francisco, and virtually — designed for touring theaters and universities
+                    across the U.S.</p>
+                <a href="#contact" class="btn">Book Solo Format</a>
+            </div>
+            <div class="format">
+                <h3>🎭 Ensemble Production (Hindi)</h3>
+                <p>Performed by Swaang Ghar collective in New Delhi and more. Multi-lingual ensemble version suitable
+                    for Indian regional theatres and festivals.</p>
+                <a href="#contact" class="btn">Book Ensemble Format</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="media">
+        <h2>Media & Trailers</h2>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>Featured in: Rattapallax, Theaterlab NYC, The Marsh SF, South Asia Institute Chicago, India Habitat Centre.
+        </p>
+    </section>
+
+    <section id="tour">
+        <h2>Performance History</h2>
+        <ul>
+            <li>The Marsh, San Francisco – Jan 2024</li>
+            <li>TheaterLab, NYC – July 2023</li>
+            <li>Akshara Theatre, New Delhi – April 2023</li>
+            <li>Bowery Poetry, NYC – Oct 2022</li>
+            <li>Teachers College Columbia – March 2024</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact & Booking</h2>
+        <p>Email: <a href="mailto:bookings@fontwala.com">bookings@fontwala.com</a></p>
+        <p>Download the press kit: <a href="Fontwala_Press_Kit.pdf" class="btn">Press Kit PDF</a></p>
+        <p>Follow @FontwalaExperience on Instagram</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Fontwala | Created by Shubhra Prakash | Site powered by GitHub Pages</p>
+    </footer>
+</body>
+
+</html>
